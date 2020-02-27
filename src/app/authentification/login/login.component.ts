@@ -34,13 +34,16 @@ export class LoginComponent implements OnInit {
           if (val['email'] == this.user.email && val['identifiant'] == this.user.identifiant) {
             console.log('exist');
             if (val['profils'] == 'Admin') {
-              this.router.navigateByUrl('homeAdmin');
+              this.router.navigateByUrl('home');
+              //norlmelemnt chaque profile a sa propre page home
             }
             if (val['profils'] == 'User') {
-              this.router.navigateByUrl('homeUser');
+              this.router.navigateByUrl('home');
+              //norlmelemnt chaque profile a sa propre page home
             }
             if (val['profils'] == 'Editor') {
-              this.router.navigateByUrl('homeEditor');
+              this.router.navigateByUrl('home');
+              //norlmelemnt chaque profile a sa propre page home
             }
           } else {
             console.log('No user');

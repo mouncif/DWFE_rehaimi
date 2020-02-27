@@ -9,6 +9,7 @@ import {
 import { MatDialogModule } from '@angular/material';
 import { MatSnackBarModule } from '@angular/material';
 import { MatPaginatorModule } from '@angular/material';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { MatPaginatorModule } from '@angular/material';
     MatNativeDateModule,
     MatTableModule,
     MatSnackBarModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSidenavModule
   ],
   exports: [
     CommonModule,
@@ -47,7 +49,9 @@ import { MatPaginatorModule } from '@angular/material';
     MatNativeDateModule,
     MatTableModule,
     MatSnackBarModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSidenavModule
+
   ]
 })
 export class MaterialModule { }

@@ -15,6 +15,8 @@ import { ProduitService } from './services/produit.service';
 import { ClientService } from './services/client.service';
 import { FournisseurService } from './services/fournisseur.service';
 import { NavbarComponent } from './home/navbar/navbar.component';
+import { SidebarComponent } from './home/sidebar/sidebar.component';
+import { FormulaireComponent } from './home/formulaire/formulaire.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { NavbarComponent } from './home/navbar/navbar.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    SidebarComponent,
+    FormulaireComponent
   ],
   imports: [
     BrowserModule,
