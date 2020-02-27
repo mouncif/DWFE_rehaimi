@@ -22,11 +22,7 @@ export class LoginComponent implements OnInit {
   constructor(private service: UtilisateurService, private router: Router) { }
 
   ngOnInit() {
-    if (localStorage.getItem('loged') != null){
-      this.router.navigateByUrl(['home']);
-    }else{
-    console.log('Connected');
-    }
+
   }
 
   onLogin() {
@@ -38,6 +34,7 @@ export class LoginComponent implements OnInit {
         for (var val of data) {
           if (val['email'] == this.user.email && val['identifiant'] == this.user.identifiant) {
             console.log('exist');
+            this.router.navigateByUrl('home');
             localStorage.setItem("loged", 'loged');
             if (val['profils'] == 'Admin') {
               this.router.navigateByUrl('home');
@@ -51,6 +48,7 @@ export class LoginComponent implements OnInit {
               this.router.navigateByUrl('home');
               //norlmelemnt chaque profile a sa propre page home
             }
+            break;
           } else {
             console.log('No user');
           }

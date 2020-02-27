@@ -10,7 +10,7 @@
                                 <mat-error>Invalid email.</mat-error>
                             </mat-form-field>
                             <mat-form-field>
-                                <input formControlName="identifiant" matInput placeholder="identifiant">
+                                <input type="password" formControlName="identifiant" matInput placeholder="identifiant">
                                 <mat-error *ngIf="service.form.controls['identifiant'].errors?.required">Invalid mot de pass.</mat-error>
                                 <mat-error *ngIf="service.form.controls['identifiant'].errors?.minlength">Minimum 8 charactors neede d.
                                 </mat-error>
