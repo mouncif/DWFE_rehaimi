@@ -1,0 +1,47 @@
+{
+    "Produit": [{
+        "id": 1,
+        "nomProduit": "product",
+        "nomCourtProduit": "opopp",
+        "prixBase": "9222",
+        "prixVente": "6313232",
+        "seuilMaxRemise": "999",
+        "uniteProduit": "dzdz",
+        "image": "image.png",
+        "quantiteInitialStock": 299,
+        "quantiteActuelStock": 5661
+    }],
+    "Fournisseur": [{
+            "id": 1,
+            "nomFournisseur": "Abdo",
+            "nomCourtFournisseur": "Abdo Rehaimi",
+            "villeFournisseur": "Agadir",
+            "adressFournisseur": "email@email.com",
+            "telFixFournisseur": "05610",
+            "telMobileFournisseur": "15121212",
+            "faxFournisseur": "111161",
+            "adressEmailFournisseur": "111@ad.ad"
+        }
+
+    ],
+    "Client": [{
+        "id": 1,
+        "nomClient": "Avzs",
+        "prenomClient": "dkzlkdz",
+        "statutClient": "dzzdzd",
+        "photoClient": "dzad.ad",
+        "telClient": "0611312",
+        "emailClient": "1zdzd@zd.za",
+        "adressClient": "dzd1zd",
+        "villeClient": "dzdzd"
+    }],
+    "Utilisateur": [{
+        "id": 1,
+        "profils": "User",
+        "dateCreation": "12/1/2022",
+        "dateFin": "12/11/2022",
+        "photo": "dzdz.zd",
+        "email": "aeae@.aeae.da",
+        "identifiant": "dzdzd"
+    }]
+}
