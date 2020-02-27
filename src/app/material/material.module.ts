@@ -6,11 +6,11 @@ import {
   MatTableModule, MatMenuModule, MatIconModule, MatProgressSpinnerModule,
   MatGridListModule, MatDatepickerModule, MatNativeDateModule,
 } from '@angular/material';
-import { MatDialogModule } from '@angular/material';
+import { MatDialogModule, MatRadioModule } from '@angular/material';
 import { MatSnackBarModule } from '@angular/material';
 import { MatPaginatorModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
-
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [],
@@ -31,7 +31,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatTableModule,
     MatSnackBarModule,
     MatPaginatorModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatRadioModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     CommonModule,
@@ -50,7 +53,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatTableModule,
     MatSnackBarModule,
     MatPaginatorModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatRadioModule,
+    ReactiveFormsModule,
+    FormsModule
 
   ]
 })

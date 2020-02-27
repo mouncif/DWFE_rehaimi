@@ -4,10 +4,11 @@ import { LoginComponent } from "./authentification/login/login.component";
 import { RegisterComponent } from "./authentification/register/register.component";
 import { AuthentificationComponent } from "./authentification/authentification.component";
 import { HomeComponent } from "./home/home.component";
-
+import { Authgard } from "./services/AuthGard";
 const routes: Routes = [
   {
     path: '', component: AuthentificationComponent,
+    //canActivate: [Authgard],
     children: [
       { path: '', component: LoginComponent },
       { path: 'login', component: LoginComponent },
