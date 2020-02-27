@@ -15,7 +15,6 @@ import { ProduitService } from './services/produit.service';
 import { ClientService } from './services/client.service';
 import { FournisseurService } from './services/fournisseur.service';
 import { NavbarComponent } from './home/navbar/navbar.component';
-
 @NgModule({
   declarations: [
     AppComponent,

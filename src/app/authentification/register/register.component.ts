@@ -11,13 +11,42 @@ import { UtilisateurService } from "../../services/utilisateur.service";
 })
 export class RegisterComponent implements OnInit {
 
+  private user: utilisateur = {
+    profils: '',
+    dateCreation: '',
+    dateFin: '',
+    photo: '',
+    email: '',
+    identifiant: ''
+  };
   constructor(private service: UtilisateurService, private router: Router) { }
 
   ngOnInit() {
   }
 
+  onSubmit() {
+    if (this.service.form.valid) {
+      this.user = this.service.form.value;
+      console.log(this.user);
+      try {
+        this.service.add(this.user).subscribe((user) => {
+          console.log('Enregistrer avec succes');
+          this.router.navigateByUrl('login');
+        });
+      } catch (err) {
+        console.log(err);
+      } finally {
+        this.onClear();
+      }
+    } else {
+      console.log("something went wrong");
+    }
+
+  }
+
   onClear() {
-    this.service.initializeFormGroup();
+    console.log('initialiser');
     this.service.form.reset();
+    this.service.initializeFormGroup();
   }
 }
