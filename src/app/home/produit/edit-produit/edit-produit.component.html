@@ -1,0 +1,114 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="card col-md-12 col-xl-12 col-sm-12" style="margin-top: 25px;">
+            <div class="card-body">
+
+                <h5 class="card-title">Nouveau Produit</h5>
+                <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+
+                    <fieldset class="scheduler-border">
+                        <legend class="scheduler-border"> Remplire ce formulaire suivant !</legend>
+
+                        <input type="hidden" formControlName="id">
+                        <fieldset class="scheduler-border">
+                            <legend class="scheduler-border"> Information Personnel </legend>
+                            <div class="row">
+                                <div class="col-md-2 col-xl-2 col-sm-2">
+                                    <img src="../../../../assets/img/profileArt.png" style="height: 70%;width: 90%;" alt="picture">
+                                </div>
+
+                                <div class="col-md-6 col-xl-6 col-sm-6">
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="nomProduit*" formControlName="nomProduit">
+                                        <mat-error>Invalid email nomProduit.</mat-error>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="nomCourtProduit*" formControlName="nomCourtProduit">
+                                        <mat-error>Invalid email nomCourtProduit.</mat-error>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="image*" formControlName="image">
+                                        <mat-error>Invalid email nomCourtProduit.</mat-error>
+                                    </mat-form-field>
+
+                                </div>
+
+
+                                <div class="col-md-4 col-xl-4 col-sm-4">
+                                    <p>Statut</p>
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="prixBase*" formControlName="prixBase">
+                                        <mat-error>Invalid email nomCourtProduit.</mat-error>
+                                    </mat-form-field>
+
+
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="prixVente *" formControlName="prixVente">
+                                        <mat-error>Invalid prixBase .</mat-error>
+                                    </mat-form-field>
+                                </div>
+
+
+                            </div>
+                        </fieldset>
+                        <fieldset class="scheduler-border">
+                            <legend class="scheduler-border"> Stock </legend>
+                            <div class="row">
+                                <div class="offset-2 col-md-6 col-xl-6 col-sm-6">
+                                    <p>Abonnement</p>
+
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="quantiteInitialStock*" formControlName="quantiteInitialStock">
+                                        <mat-error>Invalid quantiteInitialStock.</mat-error>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="quantiteActuelStock*" formControlName="quantiteActuelStock">
+                                        <mat-error>Invalid email quantiteActuelStock.</mat-error>
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-4 col-xl-4 col-sm-4">
+                                    <h6 style="color: orange;">Voir Abonnement</h6>
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="uniteProduit*" formControlName="uniteProduit">
+                                        <mat-error>Invalid email uniteProduit .</mat-error>
+                                    </mat-form-field>
+
+
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="scheduler-border">
+                            <legend class="scheduler-border"> Resident </legend>
+                            <div class="row">
+                                <div class="offset-2 col-md-10 col-xl-10 col-sm-10">
+
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="seuilMaxRemise" formControlName="seuilMaxRemise">
+                                        <mat-error>Invalid email seuilMaxRemise.</mat-error>
+                                    </mat-form-field>
+
+                                </div>
+
+
+                            </div>
+                        </fieldset>
+                    </fieldset>
+                    <fieldset class="scheduler-border">
+                        <div class="offset-10 button-row " style="margin-top: 10px;">
+                            <button mat-raised-button style="width: 100px;" color="warn" (click)="onClear()">Clear</button>
+                            <button mat-raised-button style="width: 100px;" color="primary" type="submit">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

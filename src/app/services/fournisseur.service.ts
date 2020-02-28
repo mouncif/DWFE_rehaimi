@@ -8,7 +8,7 @@ import { fournisseur } from "../models/fournisseur.model";
 })
 export class FournisseurService {
 
-  private url = "http://localhost:3000/Fournisseurt";
+  private url = "http://localhost:3000/Fournisseur";
 
   constructor(private http: HttpClient) { }
 
@@ -17,7 +17,7 @@ export class FournisseurService {
     nomFournisseur: new FormControl('', Validators.required),
     nomCourtFournisseur: new FormControl('', Validators.required),
     villeFournisseur: new FormControl('', Validators.required),
-    adressFournisseur: new FormControl('', [Validators.minLength(8)]),
+    adressFournisseur: new FormControl('',  Validators.required),
     telFixFournisseur: new FormControl('', [Validators.required, Validators.minLength(8)]),
     telMobileFournisseur: new FormControl('', [Validators.required, Validators.minLength(8)]),
     faxFournisseur: new FormControl('', [Validators.required, Validators.minLength(8)]),

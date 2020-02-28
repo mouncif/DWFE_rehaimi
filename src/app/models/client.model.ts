@@ -7,5 +7,8 @@ export interface client {
   telClient: string,
   emailClient: string,
   adressClient: string,
-  villeClient: string
+  villeClient: string,
+  abonnement: string,
+  dateDebut: string;
+  dateFin: string
 }

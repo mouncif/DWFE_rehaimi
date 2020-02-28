@@ -1,0 +1,70 @@
+<div class="mat-elevation-z8" style="background-color: #ffffff; margin-top: 15px;">
+    <mat-form-field class="col-12">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        <button style="float: right;" _ngcontent-bmt-c1="" mat-icon-button="" class="mat-icon-button mat-button-base"><span class="mat-button-wrapper"><i _ngcontent-bmt-c1="" class="material-icons"> search </i></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple="" ng-reflect-centered="true" ng-reflect-disabled="false" ng-reflect-trigger="[object HTMLButtonElement]"></div><div class="mat-button-focus-overlay"></div></button>
+    </mat-form-field>
+    <table mat-table [dataSource]="listData">
+
+        <!-- Position Column -->
+
+        <ng-container matColumnDef="nomClient">
+            <th mat-header-cell *matHeaderCellDef> Nom </th>
+            <td mat-cell *matCellDef="let element"> {{element.nomClient}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="prenomClient">
+            <th mat-header-cell *matHeaderCellDef> prenomClient </th>
+            <td mat-cell *matCellDef="let element"> {{element.prenomClient}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="statutClient">
+            <th mat-header-cell *matHeaderCellDef> statutClient </th>
+            <td mat-cell *matCellDef="let element"> {{element.statutClient}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="telClient">
+            <th mat-header-cell *matHeaderCellDef> telClient </th>
+            <td mat-cell *matCellDef="let element"> {{element.telClient}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="emailClient">
+            <th mat-header-cell *matHeaderCellDef> emailClient </th>
+            <td mat-cell *matCellDef="let element"> {{element.emailClient}} </td>
+        </ng-container>
+        <ng-container matColumnDef="adressClient">
+            <th mat-header-cell *matHeaderCellDef> adressClient </th>
+            <td mat-cell *matCellDef="let element"> {{element.adressClient}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="abonnement">
+            <th mat-header-cell *matHeaderCellDef> abonnement </th>
+            <td mat-cell *matCellDef="let element"> {{element.abonnement}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="villeClient">
+            <th mat-header-cell *matHeaderCellDef> Ville </th>
+            <td mat-cell *matCellDef="let element"> {{element.villeClient}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> action </th>
+            <td mat-cell *matCellDef="let row">
+
+                <button mat-icon-button (click)="onEdit(row)">
+        <mat-icon>launch</mat-icon>
+      </button>
+                <button mat-icon-button (click)="onDelete(row.id)" color="warn">
+        <mat-icon>delete_outline</mat-icon>
+      </button>
+
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[3, 5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

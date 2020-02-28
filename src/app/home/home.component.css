@@ -1,0 +1,9 @@
+.example-container {
+    width: 100%;
+    height: 100%;
+}
+
+.mat-toolbar.mat-accent {
+    background: #FFAA56;
+    color: #fff;
+}

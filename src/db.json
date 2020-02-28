@@ -11,6 +11,18 @@
       "image": "image.png",
       "quantiteInitialStock": 299,
       "quantiteActuelStock": 5661
+    },
+    {
+      "id": 2,
+      "nomProduit": "zaazd",
+      "nomCourtProduit": "azdazdazd",
+      "prixBase": "azdazd",
+      "prixVente": "azdazda",
+      "seuilMaxRemise": "azdazd",
+      "uniteProduit": "zadazd",
+      "image": "azdazd",
+      "quantiteInitialStock": "22",
+      "quantiteActuelStock": "22"
     }
   ],
   "Fournisseur": [
@@ -24,19 +36,61 @@
       "telMobileFournisseur": "15121212",
       "faxFournisseur": "111161",
       "adressEmailFournisseur": "111@ad.ad"
+    },
+    {
+      "id": 2,
+      "nomFournisseur": "AAAAAAA",
+      "nomCourtFournisseur": "AAAAAAAA",
+      "villeFournisseur": "AAAAAA",
+      "adressFournisseur": "AAAAAA",
+      "telFixFournisseur": "0055S2A10",
+      "telMobileFournisseur": "0S563S1A5",
+      "faxFournisseur": "0510606062",
+      "adressEmailFournisseur": "lamaola@gmail.com"
     }
   ],
   "Client": [
     {
       "id": 1,
-      "nomClient": "Avzs",
-      "prenomClient": "dkzlkdz",
-      "statutClient": "dzzdzd",
-      "photoClient": "dzad.ad",
-      "telClient": "0611312",
-      "emailClient": "1zdzd@zd.za",
-      "adressClient": "dzd1zd",
-      "villeClient": "dzdzd"
+      "nomClient": "AAAAAAAddxx",
+      "prenomClient": "AAAAAA",
+      "statutClient": "Professionel",
+      "photoClient": "",
+      "telClient": "AAAAAAAAAA",
+      "emailClient": "abdeslam.rehaimi@gmail.com",
+      "adressClient": "AAAAAAA",
+      "villeClient": "AgadirE",
+      "abonnement": "AAAAAA",
+      "dateDebut": "AAAAAA",
+      "dateFin": "AAAAAAA"
+    },
+    {
+      "id": 2,
+      "nomClient": "Rehaimi",
+      "prenomClient": "Abdeslam",
+      "statutClient": "Professionel",
+      "photoClient": "view-source:file:///C:/Users/TOSHIBA/angularWeb/Preparation/src/app/hoent.html",
+      "telClient": "062525252525",
+      "emailClient": "email@email.com",
+      "adressClient": "qsq ss",
+      "villeClient": "kesh",
+      "abonnement": "Fix",
+      "dateDebut": "12/12/2015",
+      "dateFin": "12/25/22"
+    },
+    {
+      "id": 3,
+      "nomClient": "Saymon",
+      "prenomClient": "Dimaryo",
+      "statutClient": "Professionel",
+      "photoClient": "",
+      "telClient": "06295120c",
+      "emailClient": "email@mm.com",
+      "adressClient": "scqcqscq",
+      "villeClient": "Fes",
+      "abonnement": "ssas",
+      "dateDebut": "12/12/2012",
+      "dateFin": "12/12/2012"
     }
   ],
   "Utilisateur": [
@@ -57,6 +111,15 @@
       "photo": null,
       "email": "abdeslam.rehaimi@gmail.com",
       "identifiant": "123456789"
+    },
+    {
+      "id": 3,
+      "profils": "",
+      "dateCreation": "",
+      "dateFin": "",
+      "photo": "",
+      "email": "newemail@gmail.com",
+      "identifiant": "123456789ab"
     }
   ]
 }

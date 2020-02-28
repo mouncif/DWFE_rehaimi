@@ -1,0 +1,19 @@
+<mat-drawer-container class="example-container" style="background-color: antiquewhite;" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <p>Auto-resizing sidenav</p>
+        <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+        <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+    </mat-drawer>
+    <div class="example-sidenav-content">
+        <button type="button" routerLink="edits" mat-button>
+      New Product
+    </button>
+        <button type="button" routerLink="list"  mat-button>
+      Lists
+    </button>
+
+    </div>
+</mat-drawer-container>
+<router-outlet> </router-outlet>

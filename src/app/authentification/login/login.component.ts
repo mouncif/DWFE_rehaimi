@@ -34,21 +34,21 @@ export class LoginComponent implements OnInit {
         for (var val of data) {
           if (val['email'] == this.user.email && val['identifiant'] == this.user.identifiant) {
             console.log('exist');
-            this.router.navigateByUrl('home');
+            this.router.navigateByUrl('home/clients');
             localStorage.setItem("loged", 'loged');
             if (val['profils'] == 'Admin') {
-              this.router.navigateByUrl('home');
+              this.router.navigateByUrl('home/clients/list');
               //norlmelemnt chaque profile a sa propre page home
             }
             if (val['profils'] == 'User') {
-              this.router.navigateByUrl('home');
+              this.router.navigateByUrl('home/clients/list');
               //norlmelemnt chaque profile a sa propre page home
             }
             if (val['profils'] == 'Editor') {
-              this.router.navigateByUrl('home');
+              this.router.navigateByUrl('home/clients/list');
               //norlmelemnt chaque profile a sa propre page home
             }
-            break;
+
           } else {
             console.log('No user');
           }

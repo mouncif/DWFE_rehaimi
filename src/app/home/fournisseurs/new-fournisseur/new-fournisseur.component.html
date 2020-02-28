@@ -1,0 +1,98 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="card col-md-12 col-xl-12 col-sm-12" style="margin-top: 25px;">
+            <div class="card-body">
+
+                <h5 class="card-title">Nouveau Fournisseur</h5>
+                <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+
+                    <fieldset class="scheduler-border">
+                        <legend class="scheduler-border"> Remplire ce formulaire suivant !</legend>
+
+                        <input type="hidden" formControlName="id">
+                        <fieldset class="scheduler-border">
+                            <legend class="scheduler-border"> Information Personnel </legend>
+                            <div class="row">
+                                <div class="col-md-6 col-xl-6 col-sm-6">
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="nomFournisseur*" formControlName="nomFournisseur">
+                                        <mat-error>Invalid email nomFournisseur.</mat-error>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="nomCourtFournisseur*" formControlName="nomCourtFournisseur">
+                                        <mat-error>Invalid email nomCourtFournisseur.</mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 col-xl-6 col-sm-6">
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="villeFournisseur*" formControlName="villeFournisseur">
+                                        <mat-error>Invalid email villeFournisseur.</mat-error>
+                                    </mat-form-field>
+
+
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="adressFournisseur *" formControlName="adressFournisseur">
+                                        <mat-error>Invalid adressFournisseur .</mat-error>
+                                    </mat-form-field>
+                                </div>
+
+
+                            </div>
+                        </fieldset>
+                        <fieldset class="scheduler-border">
+                            <legend class="scheduler-border"> Contact </legend>
+                            <div class="row">
+                                <div class="col-md-6 col-xl-6 col-sm-6">
+                                    <p>Abonnement</p>
+
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="telFixFournisseur*" formControlName="telFixFournisseur">
+                                        <mat-error *ngIf="service.form.controls['telFixFournisseur'].errors?.required">This field is mandatory.
+                                        </mat-error>
+                                        <mat-error *ngIf="service.form.controls['telFixFournisseur'].errors?.minlength">Minimum 8 charactors neede d.</mat-error>
+
+                                    </mat-form-field>
+
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="telMobileFournisseur*" formControlName="telMobileFournisseur">
+                                        <mat-error *ngIf="service.form.controls['telFixFournisseur'].errors?.required">This field is mandatory.
+                                        </mat-error>
+                                        <mat-error *ngIf="service.form.controls['telMobileFournisseur'].errors?.minlength">Minimum 8 charactors neede d.</mat-error>
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="col-md-4 col-xl-4 col-sm-4">
+                                    <h6 style="color: orange;">Voir Abonnement</h6>
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="faxFournisseur*" formControlName="faxFournisseur">
+                                        <mat-error *ngIf="service.form.controls['faxFournisseur'].errors?.required">This field is mandatory.
+                                        </mat-error>
+                                        <mat-error *ngIf="service.form.controls['faxFournisseur'].errors?.minlength">Minimum 8 charactors neede d.</mat-error>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="input-form">
+                                        <input matInput placeholder="adressEmailFournisseur" formControlName="adressEmailFournisseur">
+                                        <mat-error>Invalid email adressEmailFournisseur.</mat-error>
+                                    </mat-form-field>
+
+
+                                </div>
+                            </div>
+                        </fieldset>
+                    </fieldset>
+                    <fieldset class="scheduler-border">
+                        <div class="offset-10 button-row " style="margin-top: 10px;">
+                            <button mat-raised-button style="width: 100px;" color="warn" (click)="onClear()">Clear</button>
+                            <button mat-raised-button style="width: 100px;" color="primary" type="submit">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
