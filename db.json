@@ -14,7 +14,7 @@
     },
     {
       "id": 2,
-      "nomProduit": "zaazd",
+      "nomProduit": "zaazdzzzzzzz",
       "nomCourtProduit": "azdazdazd",
       "prixBase": "azdazd",
       "prixVente": "azdazda",
@@ -39,7 +39,7 @@
     },
     {
       "id": 2,
-      "nomFournisseur": "AAAAAAA",
+      "nomFournisseur": "gf",
       "nomCourtFournisseur": "AAAAAAAA",
       "villeFournisseur": "AAAAAA",
       "adressFournisseur": "AAAAAA",
@@ -51,46 +51,60 @@
   ],
   "Client": [
     {
-      "id": 1,
-      "nomClient": "AAAAAAAddxx",
-      "prenomClient": "AAAAAA",
-      "statutClient": "Professionel",
-      "photoClient": "",
-      "telClient": "AAAAAAAAAA",
-      "emailClient": "abdeslam.rehaimi@gmail.com",
-      "adressClient": "AAAAAAA",
-      "villeClient": "AgadirE",
-      "abonnement": "AAAAAA",
-      "dateDebut": "AAAAAA",
-      "dateFin": "AAAAAAA"
-    },
-    {
       "id": 2,
-      "nomClient": "Rehaimi",
-      "prenomClient": "Abdeslam",
+      "nomClient": "Saymonaaze",
+      "prenomClient": "Maynon",
       "statutClient": "Professionel",
-      "photoClient": "view-source:file:///C:/Users/TOSHIBA/angularWeb/Preparation/src/app/hoent.html",
-      "telClient": "062525252525",
-      "emailClient": "email@email.com",
-      "adressClient": "qsq ss",
-      "villeClient": "kesh",
-      "abonnement": "Fix",
-      "dateDebut": "12/12/2015",
-      "dateFin": "12/25/22"
+      "photoClient": "maksi.sas.jpg",
+      "telClient": "062514525",
+      "emailClient": "itsmadeon@malo.fr",
+      "adressClient": "Adomman Ollkm",
+      "villeClient": "Fes",
+      "abonnement": "Yearly",
+      "dateDebut": "12/12/2016",
+      "dateFin": "12/02/2015"
     },
     {
       "id": 3,
-      "nomClient": "Saymon",
-      "prenomClient": "Dimaryo",
+      "nomClient": "NomTAaa",
+      "prenomClient": "PrenT",
       "statutClient": "Professionel",
-      "photoClient": "",
-      "telClient": "06295120c",
-      "emailClient": "email@mm.com",
-      "adressClient": "scqcqscq",
-      "villeClient": "Fes",
-      "abonnement": "ssas",
-      "dateDebut": "12/12/2012",
-      "dateFin": "12/12/2012"
+      "photoClient": "image.gt.png",
+      "telClient": "06258585",
+      "emailClient": "nomt@gmai.com",
+      "adressClient": "gt modan",
+      "villeClient": "Gitoo",
+      "abonnement": "OpaaYno",
+      "dateDebut": "12/6/2012",
+      "dateFin": "12/6/2012"
+    },
+    {
+      "id": 4,
+      "nomClient": "Oiyoo",
+      "prenomClient": "Poioi",
+      "statutClient": "Professionel",
+      "photoClient": "opiyu.gmoo.png",
+      "telClient": "06258885",
+      "emailClient": "imap@gmail.fr",
+      "adressClient": "Goolamak",
+      "villeClient": "Tiznit",
+      "abonnement": "Monthly",
+      "dateDebut": "12/02/2018",
+      "dateFin": "12/02/2018"
+    },
+    {
+      "id": 5,
+      "nomClient": "editNomze",
+      "prenomClient": "editPrenom",
+      "statutClient": "Civile",
+      "photoClient": "edit.png",
+      "telClient": "05252525",
+      "emailClient": "twiiter@twitter.com",
+      "adressClient": "Bangallow",
+      "villeClient": "Buenos aires",
+      "abonnement": "Abdoo",
+      "dateDebut": "12/20/2015",
+      "dateFin": "12/20/2015"
     }
   ],
   "Utilisateur": [
@@ -100,26 +114,28 @@
       "dateCreation": "12/1/2022",
       "dateFin": "12/11/2022",
       "photo": "dzdz.zd",
-      "email": "email@email.com",
+      "email": null,
       "identifiant": "dzdzdaaaa"
     },
     {
       "id": 2,
-      "profils": null,
-      "dateCreation": null,
-      "dateFin": null,
-      "photo": null,
-      "email": "abdeslam.rehaimi@gmail.com",
+      "profils": "",
+      "dateCreation": "",
+      "dateFin": "",
+      "photo": "",
+      "email": "itsmadeon@gmail.com",
       "identifiant": "123456789"
     },
     {
       "id": 3,
       "profils": "",
-      "dateCreation": "",
+      "dateCreation": "2020/02/29",
       "dateFin": "",
       "photo": "",
-      "email": "newemail@gmail.com",
-      "identifiant": "123456789ab"
+      "email": "example@gmail.com",
+      "identifiant": "example134",
+      "confirmIdentifiant": "",
+      "oldidentifiant": ""
     }
   ]
 }

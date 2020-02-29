@@ -53,8 +53,10 @@ export class ClientService {
   delete(id) {
     return this.http.delete(`${this.url}/${id}`);
   }
-  update(cli) {
-    return this.http.put(`${this.url}/${cli.id}`, cli);
+
+
+  update(user) {
+    return this.http.put(`${this.url}/${user.id}`, user);
   }
 
   populateform(row) {

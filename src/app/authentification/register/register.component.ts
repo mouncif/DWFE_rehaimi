@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { utilisateur } from '../../models/utilisateur.model';
 import { UtilisateurService } from "../../services/utilisateur.service";
+import { DatePipe } from '@angular/common';
+import {formatDate} from '@angular/common';
 
 @Component({
   selector: 'app-register',
@@ -19,14 +21,20 @@ export class RegisterComponent implements OnInit {
     email: '',
     identifiant: ''
   };
-  constructor(private service: UtilisateurService, private router: Router) { }
+  private myDate : string ;
+
+  constructor(private service: UtilisateurService, private router: Router ) {
+    this.myDate = formatDate(new Date(), 'yyyy/MM/dd', 'en').toLocaleString();
+   }
 
   ngOnInit() {
+    this.onClear();
   }
 
   onSubmit() {
     if (this.service.form.valid) {
       this.user = this.service.form.value;
+      this.user.dateCreation= this.myDate;
       console.log(this.user);
       try {
         this.service.add(this.user).subscribe((user) => {

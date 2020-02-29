@@ -45,7 +45,6 @@
                             <legend class="scheduler-border"> Contact </legend>
                             <div class="row">
                                 <div class="col-md-6 col-xl-6 col-sm-6">
-                                    <p>Abonnement</p>
 
                                     <mat-form-field class="input-form">
                                         <input matInput placeholder="telFixFournisseur*" formControlName="telFixFournisseur">
@@ -64,7 +63,6 @@
                                 </div>
 
                                 <div class="col-md-4 col-xl-4 col-sm-4">
-                                    <h6 style="color: orange;">Voir Abonnement</h6>
                                     <mat-form-field class="input-form">
                                         <input matInput placeholder="faxFournisseur*" formControlName="faxFournisseur">
                                         <mat-error *ngIf="service.form.controls['faxFournisseur'].errors?.required">This field is mandatory.
@@ -83,7 +81,7 @@
                         </fieldset>
                     </fieldset>
                     <fieldset class="scheduler-border">
-                        <div class="offset-10 button-row " style="margin-top: 10px;">
+                        <div class="offset-9 offset-lg-8 offset-md-8 offset-sm-8 button-row " style="margin-top: 10px;">
                             <button mat-raised-button style="width: 100px;" color="warn" (click)="onClear()">Clear</button>
                             <button mat-raised-button style="width: 100px;" color="primary" type="submit">Submit</button>
                         </div>

@@ -31,24 +31,23 @@ const routes: Routes = [
     path: 'home', component: HomeComponent, children: [
       { path: '', component: ClientsComponent },
       { path: 'clients', component: ClientsComponent, children: [
-        {path: '', component: ListComponent},
+        {path: '', component: EditsComponent},
         {path: 'list', component: ListComponent},
         {path: 'edits', component: EditsComponent}
       ] },
       { path: 'products', component: ProduitComponent, children: [
-        {path: '', component: ListProduitComponent},
+        {path: '', component: EditProduitComponent},
         {path: 'edits', component:EditProduitComponent },
         {path: 'list', component: ListProduitComponent}
       ]},
       { path: 'fournisseurs', component: FournisseursComponent, children: [
-        {path: '', component: ListFournisseurComponent},
+        {path: '', component: NewFournisseurComponent},
         {path: 'list', component: ListFournisseurComponent},
         {path: 'edits', component: NewFournisseurComponent}
       ] },
       { path: 'users', component: UsersComponent , children: [
         {path: '', component: ListUsersComponent},
-        {path: 'list', component: ListUsersComponent},
-        {path: 'edits', component: EditUsersComponent}
+        {path: 'list', component: ListUsersComponent}
       ]}
     ]
   }

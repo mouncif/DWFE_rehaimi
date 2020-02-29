@@ -8,7 +8,7 @@ import {
 } from '@angular/material';
 import { MatDialogModule, MatRadioModule} from '@angular/material';
 import { MatSnackBarModule , MatFormFieldModule} from '@angular/material';
-import { MatPaginatorModule, MatCheckboxModule,MatSelectModule } from '@angular/material';
+import { MatPaginatorModule, MatCheckboxModule,MatSelectModule, MatTabsModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
@@ -37,7 +37,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     FormsModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatTableModule,
+    MatTabsModule
   ],
   exports: [
     CommonModule,
@@ -62,7 +64,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     FormsModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatTabsModule
 
   ]
 })

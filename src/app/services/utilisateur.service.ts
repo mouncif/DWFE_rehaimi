@@ -18,7 +18,8 @@ export class UtilisateurService {
     photo: new FormControl(''),
     email: new FormControl('', Validators.email),
     identifiant: new FormControl('', [Validators.required, Validators.minLength(8)]),
-
+    confirmIdentifiant: new FormControl(''),
+    oldidentifiant: new FormControl('')
   });
 
   initializeFormGroup() {
@@ -29,7 +30,9 @@ export class UtilisateurService {
       dateFin: '',
       photo: '',
       email: '',
-      identifiant: ''
+      identifiant: '',
+      confirmIdentifiant: '',
+      oldidentifiant: '',
     });
   }
 
@@ -52,6 +55,10 @@ export class UtilisateurService {
 
   getAll() {
     return this.http.get<utilisateur>(this.url);
+  }
+
+  findUser(id){
+    return this.http.get<utilisateur>(`${this.url}/${id}`);
   }
 
 

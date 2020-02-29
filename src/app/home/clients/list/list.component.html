@@ -1,7 +1,6 @@
 <div class="mat-elevation-z8" style="background-color: #ffffff; margin-top: 15px;">
     <mat-form-field class="col-12">
         <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-        <button style="float: right;" _ngcontent-bmt-c1="" mat-icon-button="" class="mat-icon-button mat-button-base"><span class="mat-button-wrapper"><i _ngcontent-bmt-c1="" class="material-icons"> search </i></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple="" ng-reflect-centered="true" ng-reflect-disabled="false" ng-reflect-trigger="[object HTMLButtonElement]"></div><div class="mat-button-focus-overlay"></div></button>
     </mat-form-field>
     <table mat-table [dataSource]="listData">
 
@@ -66,5 +65,5 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 
-    <mat-paginator [pageSizeOptions]="[3, 5, 10, 20]" showFirstLastButtons></mat-paginator>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>

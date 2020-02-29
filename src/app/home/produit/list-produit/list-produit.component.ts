@@ -1,4 +1,4 @@
-import { Component, OnInit , ViewChild} from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { produit } from 'src/app/models/produit.model';
@@ -15,9 +15,12 @@ import { EditProduitComponent } from '../edit-produit/edit-produit.component';
 })
 export class ListProduitComponent implements OnInit {
   produit: produit;
-  products: produit[];
+  products: produit[]  = [];
   listData = new MatTableDataSource<produit>();
-  displayedColumns: string[] = ['nomProduit', 'nomCourtProduit', 'prixBase', 'prixVente', 'seuilMaxRemise', 'uniteProduit', 'quantiteInitialStock', 'quantiteActuelStock', 'actions'];
+
+  displayedColumns: string[] = ['nomProduit', 'nomCourtProduit', 'prixBase', 'prixVente',
+    'seuilMaxRemise', 'uniteProduit', 'quantiteInitialStock', 'quantiteActuelStock', 'actions'];
+
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   constructor(private produitService: ProduitService, private router: Router, public notification: MatSnackBar, private dialog: MatDialog) { }
@@ -58,16 +61,17 @@ export class ListProduitComponent implements OnInit {
     }
   }
 
+
   delete(id) {
     this.produitService.delete(id).subscribe(() => {
-      this.products = this.products.filter(user => user.id != id);
+      this.products = this.products.filter(data => data.id != id);
       console.log(this.products);
-      this.fetchElements();
-      //this.notification.openSnackBar("Success Delete...!");
-      this.notification.open('Succes Delete ...');
+      // this.notification.openSnackBar("Success Delete...!");
+      this.notification.open('Succes Delete ...')._dismissAfter(5000);
       this.fetchElements();
     });
   }
+
 
 
 }

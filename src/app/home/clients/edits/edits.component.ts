@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { client } from '../../../models/client.model';
 import { ClientService } from "../../../services/client.service";
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-edits',
@@ -23,7 +24,8 @@ export class EditsComponent implements OnInit {
     dateDebut: '',
     dateFin: '',
   };
-  constructor(private service: ClientService, private router: Router) { }
+  clients :client[] = [];
+  constructor(private service: ClientService, private router: Router, public notification: MatSnackBar) { }
 
   ngOnInit() {
   }
@@ -34,32 +36,48 @@ export class EditsComponent implements OnInit {
     this.service.initializeFormGroup();
   }
 
-  onSubmit() {
-    if (this.service.form.valid) {
+
+
+  update() {
+    console.log('tryng update');
+    this.service.update(this.client).subscribe(() => console.log('Done !'));
+  }
+
+
+
+
+
+
+  onSubmit(){
+    console.log('Optioooooo');
+    if(this.service.form.valid){
       this.client = this.service.form.value;
       console.log(this.client);
-      try {
-        this.service.add(this.client).subscribe((user) => {
-          console.log('Enregistrer avec succes');
-          this.onClear();
-          this.service.form.reset();
-        });
-      } catch (err) {
-        console.log(err);
-      } finally {
-        this.onClear();
-      }
-    } else {
-      console.log(this.client);
-      this.update();
+      this.add();
       this.service.form.reset();
+      this.service.initializeFormGroup();
+    };
+  }
+
+  add(){
+    if(this.client.id == undefined){
+      console.log(this.client);
+      this.service.add(this.client)
+      .subscribe((user)=>{
+        this.clients = [user, ...this.clients];
+        this.notification.open('Added sucessful ...')._dismissAfter(5000);
+      });
+    }
+    else{
+      this.service.update(this.client)
+      .subscribe((cli)=>{
+        console.log(cli);
+        this.notification.open('Update Succesful ...')._dismissAfter(5000);
+      });
     }
 
   }
 
-  update() {
-    this.service.update(this.client).subscribe();
-  }
 
 
 

@@ -1,0 +1,95 @@
+<mat-tab-group>
+
+
+    <mat-tab label="Edit Pasword">
+        <h2 style=" margin-top: 10px; text-inline: center;">Password</h2>
+        <div class="row" style=" margin-top: 20px; ">
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="well well-sm">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4">
+                            <img src="../../../../assets/img/security.png" alt="" style="height: 150px;width: 150px;" class="img-rounded img-responsive" />
+                        </div>
+                        <div class="col-sm-6 col-md-8">
+                            <div class="form-group">
+
+
+                                <form [formGroup]="service.form" class="normal-form" (submit)="editePassword()">
+                                    <div class="form-row">
+                                        <div class="form-label-group">
+                                            <mat-form-field style="width: 350px;">
+                                                <input type="password" formControlName="oldidentifiant" matInput placeholder="Current identifiant">
+                                                <mat-error *ngIf="service.form.controls['oldidentifiant'].errors?.required">Invalid mot de pass.</mat-error>
+                                                <mat-error *ngIf="service.form.controls['oldidentifiant'].errors?.minlength">Minimum 8 charactors neede d.
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-label-group">
+                                            <mat-form-field style="width: 350px;">
+                                                <input type="password" formControlName="confirmIdentifiant" matInput placeholder="confirme identifiant!">
+                                                <mat-error *ngIf="service.form.controls['confirmIdentifiant'].errors?.required">Invalid mot de pass.</mat-error>
+                                                <mat-error *ngIf="service.form.controls['confirmIdentifiant'].errors?.minlength">Minimum 8 charactors neede d.
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-label-group">
+                                            <mat-form-field style="width: 350px;">
+                                                <input type="password" formControlName="confirmIdentifiant" matInput placeholder="confirme identifiant!">
+                                                <mat-error *ngIf="service.form.controls['confirmIdentifiant'].errors?.required">Invalid mot de pass.</mat-error>
+                                                <mat-error *ngIf="service.form.controls['confirmIdentifiant'].errors?.minlength">Minimum 8 charactors neede d.
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="button-row">
+                                        <button mat-raised-button color="primary" type="submit">Validate</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Edit Email">
+        <h2 style=" margin-top: 10px; text-inline: center;">Password</h2>
+        <div class="row" style=" margin-top: 20px; ">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="well well-sm">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4">
+                            <img src="../../../../assets/img/mailSecurit.jpg" alt="" style="height: 150px;width: 150px;" class="img-rounded img-responsive" />
+                        </div>
+                        <div class="col-sm-6 col-md-8">
+                            <form [formGroup]="service.form" class="normal-form" (submit)="updateEmail()">
+                                <div>
+                                    <label>{{ email }}</label><span style="margin-left: 15px;" class="badge badge-pill badge-success">Success</span>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <mat-form-field style="width: 350px;">
+                                        <input formControlName="email" matInput placeholder="Nouveau Email">
+                                        <mat-error>Invalid email.</mat-error>
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="button-row">
+                                    <button mat-raised-button color="primary" type="submit">Validate</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+</mat-tab-group>

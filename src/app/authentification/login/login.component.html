@@ -1,6 +1,7 @@
-
-    <mat-card class="example-card">
-        <mat-card-content>
+<mat-card class="example-card">
+    <mat-card-content>
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border"> Authentification </legend>
             <form [formGroup]="service.form" class="normal-form" (submit)="onLogin()">
                 <mat-grid-list cols="1" rowHeight="300px">
                     <mat-grid-tile>
@@ -16,7 +17,7 @@
                                 </mat-error>
                             </mat-form-field>
                             <div class="button-row">
-                                <button mat-raised-button color="primary" type="submit" >Login</button>
+                                <button mat-raised-button color="primary" type="submit">Login</button>
                                 <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
                                 <a style="float: right;" mat-raised-button [routerLink]="['/register']">Register</a>
                             </div>
@@ -24,6 +25,7 @@
                     </mat-grid-tile>
                 </mat-grid-list>
             </form>
-            <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
-        </mat-card-content>
-    </mat-card>
+        </fieldset>
+        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+    </mat-card-content>
+</mat-card>

@@ -14,7 +14,7 @@ import { NewFournisseurComponent } from "../new-fournisseur/new-fournisseur.comp
 })
 export class ListFournisseurComponent implements OnInit {
   fournisseur: fournisseur;
-  fournisseurs: fournisseur[];
+  fournisseurs: fournisseur[] = [];
   listData = new MatTableDataSource<fournisseur>();
   displayedColumns: string[] = ['nomFournisseur', 'nomCourtFournisseur', 'villeFournisseur', 'adressFournisseur', 'telFixFournisseur', 'telMobileFournisseur', 'faxFournisseur', 'adressEmailFournisseur', 'actions'];
 
@@ -57,15 +57,16 @@ export class ListFournisseurComponent implements OnInit {
     }
   }
 
+
   delete(id) {
     this.service.delete(id).subscribe(() => {
-      this.fournisseurs = this.fournisseurs.filter(user => user.id != id);
+      this.fournisseurs = this.fournisseurs.filter(data => data.id != id);
       console.log(this.fournisseurs);
-      this.fetchElements();
-      //this.notification.openSnackBar("Success Delete...!");
-      this.notification.open('Succes Delete ...');
+      // this.notification.openSnackBar("Success Delete...!");
+      this.notification.open('Succes Delete ...')._dismissAfter(5000);
       this.fetchElements();
     });
   }
+
 
 }

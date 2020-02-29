@@ -6,7 +6,6 @@
 
                 <h5 class="card-title">Nouveau Produit</h5>
                 <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
-
                     <fieldset class="scheduler-border">
                         <legend class="scheduler-border"> Remplire ce formulaire suivant !</legend>
 
@@ -38,7 +37,6 @@
 
 
                                 <div class="col-md-4 col-xl-4 col-sm-4">
-                                    <p>Statut</p>
                                     <mat-form-field class="input-form">
                                         <input matInput placeholder="prixBase*" formControlName="prixBase">
                                         <mat-error>Invalid email nomCourtProduit.</mat-error>
@@ -58,7 +56,6 @@
                             <legend class="scheduler-border"> Stock </legend>
                             <div class="row">
                                 <div class="offset-2 col-md-6 col-xl-6 col-sm-6">
-                                    <p>Abonnement</p>
 
                                     <mat-form-field class="input-form">
                                         <input matInput placeholder="quantiteInitialStock*" formControlName="quantiteInitialStock">
@@ -72,7 +69,6 @@
                                 </div>
 
                                 <div class="col-md-4 col-xl-4 col-sm-4">
-                                    <h6 style="color: orange;">Voir Abonnement</h6>
                                     <mat-form-field class="input-form">
                                         <input matInput placeholder="uniteProduit*" formControlName="uniteProduit">
                                         <mat-error>Invalid email uniteProduit .</mat-error>
@@ -83,7 +79,7 @@
                             </div>
                         </fieldset>
                         <fieldset class="scheduler-border">
-                            <legend class="scheduler-border"> Resident </legend>
+                            <legend class="scheduler-border"> Seuil </legend>
                             <div class="row">
                                 <div class="offset-2 col-md-10 col-xl-10 col-sm-10">
 
@@ -99,9 +95,10 @@
                         </fieldset>
                     </fieldset>
                     <fieldset class="scheduler-border">
-                        <div class="offset-10 button-row " style="margin-top: 10px;">
+                        <div class="offset-9 offset-lg-8 offset-md-8 offset-sm-8 button-row " style="margin-top: 10px;">
+
                             <button mat-raised-button style="width: 100px;" color="warn" (click)="onClear()">Clear</button>
-                            <button mat-raised-button style="width: 100px;" color="primary" type="submit">Submit</button>
+                            <button mat-raised-button style="width: 100px;" color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
                         </div>
                     </fieldset>
                 </form>

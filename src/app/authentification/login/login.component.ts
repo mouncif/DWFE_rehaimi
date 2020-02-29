@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   constructor(private service: UtilisateurService, private router: Router) { }
 
   ngOnInit() {
-
+    this.onClear();
   }
 
   onLogin() {
@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
           if (val['email'] == this.user.email && val['identifiant'] == this.user.identifiant) {
             console.log('exist');
             this.router.navigateByUrl('home/clients');
+            localStorage.setItem("id", val["id"]);
             localStorage.setItem("loged", 'loged');
             if (val['profils'] == 'Admin') {
               this.router.navigateByUrl('home/clients/list');

@@ -29,6 +29,8 @@ import { EditUsersComponent } from './home/users/edit-users/edit-users.component
 import { NewFournisseurComponent } from './home/fournisseurs/new-fournisseur/new-fournisseur.component';
 import { ListFournisseurComponent } from './home/fournisseurs/list-fournisseur/list-fournisseur.component';
 import { ListUsersComponent } from './home/users/list-users/list-users.component';
+import { ProfileComponent } from './home/users/profile/profile.component';
+import { SecurpermissonComponent } from './home/users/securpermisson/securpermisson.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +52,9 @@ import { ListUsersComponent } from './home/users/list-users/list-users.component
     EditUsersComponent,
     NewFournisseurComponent,
     ListFournisseurComponent,
-    ListUsersComponent
+    ListUsersComponent,
+    ProfileComponent,
+    SecurpermissonComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,6 +63,10 @@ import { ListUsersComponent } from './home/users/list-users/list-users.component
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule
+  ],
+  entryComponents: [
+    ProfileComponent,
+    SecurpermissonComponent
   ],
   providers: [UtilisateurService, ProduitService, ClientService, FournisseurService],
   bootstrap: [AppComponent]

@@ -14,7 +14,7 @@ import { EditsComponent } from '../edits/edits.component';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  clients: client[];
+  clients: client[] = [];
   user: client;
   listData = new MatTableDataSource<client>();
   displayedColumns: string[] = ['nomClient', 'prenomClient', 'statutClient', 'telClient', 'emailClient', 'adressClient', 'abonnement', 'villeClient', 'actions'];
@@ -58,13 +58,15 @@ export class ListComponent implements OnInit {
     }
   }
 
+
+
   delete(id) {
     this.clientService.delete(id).subscribe(() => {
-      this.clients = this.clients.filter(user => user.id != id);
+      this.clients = this.clients.filter(data => data.id != id);
       console.log(this.clients);
+      // this.notification.openSnackBar("Success Delete...!");
+      this.notification.open('Succes Delete ...')._dismissAfter(5000);
       this.fetchElements();
-      //this.notification.openSnackBar("Success Delete...!");
-      //this.notification.open('Succes Delete ...');
     });
   }
 
