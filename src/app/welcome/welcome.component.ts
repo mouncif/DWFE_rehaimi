@@ -1,9 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatDialog, MatDialogConfig } from '@angular/material';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { AuthentificationComponent } from "../authentification/authentification.component";
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 export interface DialogData {
   animal: string;
@@ -16,12 +12,13 @@ export interface DialogData {
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
-  constructor(private router: Router, public notification: MatSnackBar, private dialog: MatDialog) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   //This was used to login as modall!.. not useful
+  /*
   auth() {
     const dialConfig = new MatDialogConfig();
     dialConfig.disableClose = false;
@@ -31,5 +28,6 @@ export class WelcomeComponent implements OnInit {
     this.dialog.open(AuthentificationComponent, dialConfig).afterClosed().subscribe((data) => {
     });
   }
+  */
 
 }
