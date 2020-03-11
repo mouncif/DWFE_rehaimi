@@ -2,10 +2,10 @@
 
 Hi! this is a fine take of creating an application named "Smart Ventes", it's an exam project
 
+## Installation
 
-
-
-
+## Screen Shots
+![01 - Welcom Page](https://github.com/mouncif/DWFE_rehaimi/blob/master/Screenshots/01%20-%20Welcome%20Page.png)
 
 
 
