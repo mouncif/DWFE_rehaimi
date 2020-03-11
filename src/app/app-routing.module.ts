@@ -5,8 +5,6 @@ import { RegisterComponent } from "./authentification/register/register.componen
 import { AuthentificationComponent } from "./authentification/authentification.component";
 import { HomeComponent } from "./home/home.component";
 import { Authgard } from "./services/AuthGard";
-import { ClientsComponent } from '../app/home/clients/clients.component';
-import { EditsComponent } from '../app/home/clients/edits/edits.component';
 import { ListComponent } from '../app/home/clients/list/list.component';
 import { ProduitComponent } from './home/produit/produit.component';
 import { FournisseursComponent } from './home/fournisseurs/fournisseurs.component';
@@ -18,6 +16,9 @@ import { NewFournisseurComponent } from './home/fournisseurs/new-fournisseur/new
 import { ListUsersComponent } from './home/users/list-users/list-users.component';
 import { EditUsersComponent } from './home/users/edit-users/edit-users.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ClientsComponent } from './home/clients/clients.component';
+import { EditsComponent } from './home/clients/edits/edits.component';
+
 const routes: Routes = [
   {
     path: '', component: WelcomeComponent,
