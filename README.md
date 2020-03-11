@@ -3,8 +3,17 @@
 Hi! this is a fine take of creating an application named "Smart Ventes", it's an exam project
 
 ## About this project
+Our goal is to develop an angular SmartVentes application. The application will consist of the following modules: a Sales Management module and a user and rights module. The Sales Management module is composed of the following elements:
+
+* Product: name of the product, short name of the product, basic price of the product, selling price of the product, maximum threshold of delivery of the product, unit of the product, image of the product, initial quantity in stock, current quantity in stock
+* Supplier: name of the supplier, short name of the supplier, city of the supplier, Address of the supplier, Tel Fix of the supplier, Mobile phone of the supplier, Fax of the supplier, email address of the supplier
+* Client: client name, client first name, client status, client photo, client phone, client email, client address, client city
 
 
+The Users and Rights/Roles module allows you to manage users of the SmartVentes application by relying on a profile and the associated permissions.
+
+User: username, profiles, creation date, end date, user photo, user email
+In the application, you have two types of data: searchable or modifiable depending on the profile of the user.
 
 ## Installation
 
