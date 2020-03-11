@@ -1,3 +1,18 @@
+<mat-toolbar color="accent">
+    <p class="card-text "><i class="fa fa-foursquare someSpaces"></i> <em>Home / </em>Fournisseurs</p>
+</mat-toolbar>
+
+<mat-toolbar color="accent">
+    <p class="card-text">Bienvenu a votre espace de Smart Vente.</p>
+    <span style="flex: 1 1 auto;"></span>
+    <div>
+        <button mat-icon-button matTooltip="My Account">
+    <i class="material-icons"> search </i>
+  </button>
+    </div>
+</mat-toolbar>
+
+
 <mat-drawer-container class="example-container" style="background-color: antiquewhite;" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
         <p>Auto-resizing sidenav</p>
@@ -10,7 +25,7 @@
         <button type="button" routerLink="edits" mat-button>
       New Fournisseur
     </button>
-        <button type="button" routerLink="list"  mat-button>
+        <button type="button" routerLink="list" mat-button>
       Lists
     </button>
 

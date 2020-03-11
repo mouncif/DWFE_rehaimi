@@ -15,34 +15,25 @@
                             <div class="form-group">
 
 
-                                <form [formGroup]="service.form" class="normal-form" (submit)="editePassword()">
+                                <form [formGroup]="service.form" class="normal-form" (submit)="updatePassword()">
                                     <div class="form-row">
                                         <div class="form-label-group">
                                             <mat-form-field style="width: 350px;">
-                                                <input type="password" formControlName="oldidentifiant" matInput placeholder="Current identifiant">
-                                                <mat-error *ngIf="service.form.controls['oldidentifiant'].errors?.required">Invalid mot de pass.</mat-error>
-                                                <mat-error *ngIf="service.form.controls['oldidentifiant'].errors?.minlength">Minimum 8 charactors neede d.
-                                                </mat-error>
+                                                <input type="password" matInput formControlName="identifiant" placeholder="Current identifiant">
                                             </mat-form-field>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-label-group">
                                             <mat-form-field style="width: 350px;">
-                                                <input type="password" formControlName="confirmIdentifiant" matInput placeholder="confirme identifiant!">
-                                                <mat-error *ngIf="service.form.controls['confirmIdentifiant'].errors?.required">Invalid mot de pass.</mat-error>
-                                                <mat-error *ngIf="service.form.controls['confirmIdentifiant'].errors?.minlength">Minimum 8 charactors neede d.
-                                                </mat-error>
+                                                <input type="password" matInput formControlName="identifiant" placeholder="confirme identifiant!">
                                             </mat-form-field>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-label-group">
                                             <mat-form-field style="width: 350px;">
-                                                <input type="password" formControlName="confirmIdentifiant" matInput placeholder="confirme identifiant!">
-                                                <mat-error *ngIf="service.form.controls['confirmIdentifiant'].errors?.required">Invalid mot de pass.</mat-error>
-                                                <mat-error *ngIf="service.form.controls['confirmIdentifiant'].errors?.minlength">Minimum 8 charactors neede d.
-                                                </mat-error>
+                                                <input type="password" formControlName="identifiant" matInput placeholder="confirme identifiant!">
                                             </mat-form-field>
                                         </div>
                                     </div>

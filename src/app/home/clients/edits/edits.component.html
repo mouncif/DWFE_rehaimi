@@ -1,123 +1,139 @@
-<div class="container-fluid">
-    <div class="row">
+<div class="row">
 
-        <div class="card col-md-12 col-xl-12 col-sm-12" style="margin-top: 25px;">
-            <div class="card-body">
+    <div class="card col-md-12 col-xl-12 col-sm-12" style="margin-top: 25px;">
+        <div class="card-body">
 
-                <h5 class="card-title">Nouveau Client</h5>
-                <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+            <h5 class="card-title">Nouveau Client</h5>
+            <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
 
+                <fieldset class="scheduler-border">
+                    <legend class="scheduler-border"> Remplire ce formulaire suivant !</legend>
+
+                    <input type="hidden" formControlName="id">
                     <fieldset class="scheduler-border">
-                        <legend class="scheduler-border"> Remplire ce formulaire suivant !</legend>
-
-                        <input type="hidden" formControlName="id">
-                        <fieldset class="scheduler-border">
-                            <legend class="scheduler-border"> Information Personnel </legend>
-                            <div class="row">
-                                <div class="col-md-2 col-xl-2 col-sm-2">
-                                    <img src="../../../../assets/img/profileArt.png" style="height: 70%;width: 90%;" alt="picture">
-                                </div>
-
-                                <div class="col-md-6 col-xl-6 col-sm-6">
-                                    <mat-form-field class="input-form">
-                                        <input matInput placeholder="Nom*" formControlName="nomClient">
-                                        <mat-error>Invalid email address.</mat-error>
-                                    </mat-form-field>
-
-                                    <mat-form-field class="input-form">
-                                        <input matInput placeholder="Prenom*" formControlName="prenomClient">
-                                        <mat-error>Invalid email address.</mat-error>
-                                    </mat-form-field>
-
-                                    <mat-form-field class="input-form">
-                                        <input matInput placeholder="Image Photo url*" formControlName="photoClient">
-                                        <mat-error>Invalid picture link.</mat-error>
-                                    </mat-form-field>
-                                </div>
-
-
-                                <div class="col-md-4 col-xl-4 col-sm-4">
-                                    <p>Statut</p>
-                                    <div class="add-bottom-padding">
-                                        <mat-radio-group formControlName="statutClient">
-                                            <mat-radio-button value="Professionel" style="margin-right: 50px;">Professionel</mat-radio-button>
-                                            <mat-radio-button value="Civile">Civil</mat-radio-button>
-                                        </mat-radio-group>
-                                    </div>
-                                </div>
-
-
+                        <legend class="scheduler-border"> Information Personnel </legend>
+                        <div class="row">
+                            <div class="col-md-2 col-xl-2 col-sm-2">
+                                <img src="../../../../assets/img/user.png" style="height: 90%;width: 90%;" alt="picture">
                             </div>
-                        </fieldset>
-                        <fieldset class="scheduler-border">
-                            <legend class="scheduler-border"> Abonnement </legend>
-                            <div class="row">
-                                <div class="offset-2 col-md-6 col-xl-6 col-sm-6">
 
-                                    <mat-form-field class="input-form">
-                                        <input matInput placeholder="Abonnement*" formControlName="abonnement">
-                                        <mat-error>Invalid abonnement.</mat-error>
-                                    </mat-form-field>
+                            <div class="col-md-6 col-xl-6 col-sm-6">
+                                <mat-form-field class="input-form">
+                                    <input matInput placeholder="Nom*" formControlName="nomClient">
+                                    <mat-error>Invalid email address.</mat-error>
+                                </mat-form-field>
 
-                                    <mat-form-field class="input-form">
-                                        <input matInput placeholder="Date Debut*" formControlName="dateDebut">
-                                        <mat-error>Invalid email dateDebut.</mat-error>
-                                    </mat-form-field>
-                                </div>
+                                <mat-form-field class="input-form">
+                                    <input matInput placeholder="Prenom*" formControlName="prenomClient">
+                                    <mat-error>Invalid email address.</mat-error>
+                                </mat-form-field>
 
-                                <div class="col-md-4 col-xl-4 col-sm-4">
-                                    <h6 style="color: orange;">Voir Abonnement</h6>
-                                    <mat-form-field class="input-form">
-                                        <input matInput placeholder="Date fin*" formControlName="dateFin">
-                                        <mat-error>Invalid email date fin.</mat-error>
-                                    </mat-form-field>
+                                <mat-form-field class="input-form">
+                                    <input matInput placeholder="Image Photo url*" formControlName="photoClient">
+                                    <mat-error>Invalid picture link.</mat-error>
+                                </mat-form-field>
+                            </div>
 
 
+                            <div class="col-md-4 col-xl-4 col-sm-4">
+                                <p>Statut</p>
+                                <div class="add-bottom-padding">
+                                    <mat-radio-group formControlName="statutClient">
+                                        <mat-radio-button value="Professionel" style="margin-right: 50px;">Professionel</mat-radio-button>
+                                        <mat-radio-button value="Civile">Civil</mat-radio-button>
+                                    </mat-radio-group>
                                 </div>
                             </div>
-                        </fieldset>
-                        <fieldset class="scheduler-border">
-                            <legend class="scheduler-border"> Resident </legend>
-                            <div class="row">
-                                <div class="offset-2 col-md-6 col-xl-6 col-sm-6">
 
-                                    <mat-form-field class="input-form">
-                                        <input matInput placeholder="Tel*" formControlName="telClient">
-                                        <mat-error *ngIf="service.form.controls['telClient'].errors?.required">This field is mandatory.</mat-error>
-                                        <mat-error *ngIf="service.form.controls['telClient'].errors?.minlength">Minimum 8 charactors neede d.</mat-error>
-                                    </mat-form-field>
-                                    <mat-form-field class="input-form">
-                                        <input matInput placeholder="Email" formControlName="emailClient">
-                                        <mat-error>Invalid email address.</mat-error>
-                                    </mat-form-field>
 
-                                </div>
-
-                                <div class="col-md-4 col-xl-4 col-sm-4">
-                                    <mat-form-field class="input-form">
-                                        <input matInput placeholder="Adress*" formControlName="adressClient">
-                                        <mat-error>Invalid adressClient .</mat-error>
-                                    </mat-form-field>
-
-                                    <mat-form-field class="input-form">
-                                        <input matInput placeholder="Ville *" formControlName="villeClient">
-                                        <mat-error>Invalid adressClient .</mat-error>
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </fieldset>
-                    <fieldset class="scheduler-border">
-                        <div class="offset-9 offset-lg-8 offset-md-8 offset-sm-8 button-row " style="margin-top: 10px;">
-                            <button mat-raised-button style="width: 100px;" color="warn" (click)="onClear()">Clear</button>
-                            <button mat-raised-button style="width: 100px;" color="primary" type="submit">Submit</button>
                         </div>
                     </fieldset>
-                </form>
+                    <fieldset class="scheduler-border">
+                        <legend class="scheduler-border"> Abonnement </legend>
+                        <div class="row">
+                            <div class="offset-2 col-md-6 col-xl-6 col-sm-6">
 
-            </div>
+                                <mat-form-field class="input-form">
+                                    <mat-label>Abonnement</mat-label>
+                                    <mat-select formControlName="abonnement">
+                                        <mat-option *ngFor="let abonnement of abonnements" [value]="abonnement.value">
+                                            {{abonnement.viewValue}}
+                                        </mat-option>
+                                    </mat-select>
+                                    <mat-error>Invalid abonnement.</mat-error>
+                                </mat-form-field>
+
+                                <mat-form-field class="input-form">
+                                    <input formControlName="dateDebut" matInput [matDatepicker]="picker" placeholder="Date Debut*">
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+
+                                <!--<mat-form-field class="input-form">
+                                    <input matInput placeholder="Date Debut*" formControlName="dateDebut">
+                                    <mat-error>Invalid email dateDebut.</mat-error>
+                                </mat-form-field>-->
+                            </div>
+
+                            <div class="col-md-4 col-xl-4 col-sm-4">
+                                <h6 style="color: orange;" (click)="abonnement()">Voir Abonnement ?</h6>
+
+
+                                <mat-form-field class="input-form">
+                                    <input formControlName="dateFin" matInput [matDatepicker]="picker2" placeholder="Date fin*">
+                                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker2></mat-datepicker>
+                                </mat-form-field>
+                                <!--<mat-form-field class="input-form">
+                                    <input matInput placeholder="Date fin*" formControlName="dateFin">
+                                    <mat-error>Invalid email date fin.</mat-error>
+                                </mat-form-field>-->
+
+
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="scheduler-border">
+                        <legend class="scheduler-border"> Resident </legend>
+                        <div class="row">
+                            <div class="offset-2 col-md-6 col-xl-6 col-sm-6">
+
+                                <mat-form-field class="input-form">
+                                    <input matInput placeholder="Tel*" formControlName="telClient">
+                                    <mat-error *ngIf="service.form.controls['telClient'].errors?.required">This field is mandatory.</mat-error>
+                                    <mat-error *ngIf="service.form.controls['telClient'].errors?.minlength">Minimum 8 charactors neede d.</mat-error>
+                                </mat-form-field>
+                                <mat-form-field class="input-form">
+                                    <input matInput placeholder="Email" formControlName="emailClient">
+                                    <mat-error>Invalid email address.</mat-error>
+                                </mat-form-field>
+
+                            </div>
+
+                            <div class="col-md-4 col-xl-4 col-sm-4">
+                                <mat-form-field class="input-form">
+                                    <input matInput placeholder="Adress*" formControlName="adressClient">
+                                    <mat-error>Invalid adressClient .</mat-error>
+                                </mat-form-field>
+
+                                <mat-form-field class="input-form">
+                                    <input matInput placeholder="Ville *" formControlName="villeClient">
+                                    <mat-error>Invalid adressClient .</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </fieldset>
+                </fieldset>
+                <fieldset class="scheduler-border">
+                    <div class="button-row " style="margin-top: 10px;">
+                        <button mat-raised-button style="width: 100px;" color="warn" (click)="onClear()">Clear</button>
+                        <button mat-raised-button style="width: 100px;" color="primary" type="submit">Submit</button>
+                        <button mat-raised-button style="width: 100px; float: right;" routerLink="../list" color="white" type="submit">Close</button>
+                    </div>
+                </fieldset>
+            </form>
+
         </div>
-
     </div>
 
 </div>

@@ -5,6 +5,7 @@ import { utilisateur } from '../../models/utilisateur.model';
 import { UtilisateurService } from "../../services/utilisateur.service";
 import { DatePipe } from '@angular/common';
 import {formatDate} from '@angular/common';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-register',
@@ -23,7 +24,7 @@ export class RegisterComponent implements OnInit {
   };
   private myDate : string ;
 
-  constructor(private service: UtilisateurService, private router: Router ) {
+  constructor(private service: UtilisateurService, private router: Router, public notification: MatSnackBar ) {
     this.myDate = formatDate(new Date(), 'yyyy/MM/dd', 'en').toLocaleString();
    }
 
@@ -35,16 +36,18 @@ export class RegisterComponent implements OnInit {
     if (this.service.form.valid) {
       this.user = this.service.form.value;
       this.user.dateCreation= this.myDate;
+      this.user.profils = "User";
       console.log(this.user);
       try {
         this.service.add(this.user).subscribe((user) => {
           console.log('Enregistrer avec succes');
-          this.router.navigateByUrl('login');
+          //this.router.navigateByUrl('login');
         });
       } catch (err) {
         console.log(err);
       } finally {
         this.onClear();
+        this.notification.open('Inscription Succes ...')._dismissAfter(3000);
       }
     } else {
       console.log("something went wrong");

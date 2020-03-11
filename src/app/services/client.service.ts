@@ -22,8 +22,8 @@ export class ClientService {
     adressClient: new FormControl('', Validators.required),
     villeClient: new FormControl('', Validators.required),
     abonnement: new FormControl('', Validators.required),
-      dateDebut: new FormControl('', Validators.required),
-      dateFin: new FormControl('', Validators.required),
+    dateDebut: new FormControl(''),
+    dateFin: new FormControl(''),
   });
 
   initializeFormGroup() {

@@ -2,140 +2,192 @@
   "Produit": [
     {
       "id": 1,
-      "nomProduit": "product",
-      "nomCourtProduit": "opopp",
-      "prixBase": "9222",
-      "prixVente": "6313232",
-      "seuilMaxRemise": "999",
-      "uniteProduit": "dzdz",
-      "image": "image.png",
-      "quantiteInitialStock": 299,
-      "quantiteActuelStock": 5661
+      "nomProduit": "Computer",
+      "nomCourtProduit": "Computer Mac Book",
+      "prixBase": "20500",
+      "prixVente": "21500",
+      "seuilMaxRemise": "15",
+      "uniteProduit": "1",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MU9M2_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1566855245932",
+      "quantiteInitialStock": "2",
+      "quantiteActuelStock": "3"
     },
     {
       "id": 2,
-      "nomProduit": "zaazdzzzzzzz",
-      "nomCourtProduit": "azdazdazd",
-      "prixBase": "azdazd",
-      "prixVente": "azdazda",
-      "seuilMaxRemise": "azdazd",
-      "uniteProduit": "zadazd",
-      "image": "azdazd",
-      "quantiteInitialStock": "22",
-      "quantiteActuelStock": "22"
+      "nomProduit": "Machine LDK",
+      "nomCourtProduit": "Machine Laver",
+      "prixBase": "6800",
+      "prixVente": "7205",
+      "seuilMaxRemise": "10",
+      "uniteProduit": "1",
+      "image": "https://lh3.googleusercontent.com/proxy/jq8KshZSncY0M_MSmHd83XpkEBYGJM1ppVr0CoioJ4yUqUoO8c-0iWsl7W2M19nY0XaDxDiNet5-X1Q-SyggivySVHh81krDI83aFw",
+      "quantiteInitialStock": "3",
+      "quantiteActuelStock": "5"
     }
   ],
   "Fournisseur": [
     {
       "id": 1,
-      "nomFournisseur": "Abdo",
-      "nomCourtFournisseur": "Abdo Rehaimi",
+      "nomFournisseur": "JTKDE",
+      "nomCourtFournisseur": "JTK Technologies",
       "villeFournisseur": "Agadir",
-      "adressFournisseur": "email@email.com",
-      "telFixFournisseur": "05610",
-      "telMobileFournisseur": "15121212",
-      "faxFournisseur": "111161",
-      "adressEmailFournisseur": "111@ad.ad"
+      "adressFournisseur": "Agadir, Les amicales",
+      "telFixFournisseur": "056105559",
+      "telMobileFournisseur": "066105559",
+      "faxFournisseur": "056105558",
+      "adressEmailFournisseur": "jtk@jtktech.com"
     },
     {
       "id": 2,
-      "nomFournisseur": "gf",
-      "nomCourtFournisseur": "AAAAAAAA",
-      "villeFournisseur": "AAAAAA",
-      "adressFournisseur": "AAAAAA",
-      "telFixFournisseur": "0055S2A10",
-      "telMobileFournisseur": "0S563S1A5",
+      "nomFournisseur": "DSPFournisseur",
+      "nomCourtFournisseur": "DSP Technologies",
+      "villeFournisseur": "Tetouan",
+      "adressFournisseur": "Tetouan, TE",
+      "telFixFournisseur": "005599393",
+      "telMobileFournisseur": "06056259959",
       "faxFournisseur": "0510606062",
-      "adressEmailFournisseur": "lamaola@gmail.com"
+      "adressEmailFournisseur": "dsp@dsptech.com"
     }
   ],
   "Client": [
     {
       "id": 2,
-      "nomClient": "Saymonaaze",
+      "nomClient": "Saymonaazedd",
       "prenomClient": "Maynon",
       "statutClient": "Professionel",
-      "photoClient": "maksi.sas.jpg",
+      "photoClient": "https://thumbs.dreamstime.com/b/ic-ne-d-homme-conception-de-personne-dessin-de-vecteur-73697014.jpg",
       "telClient": "062514525",
       "emailClient": "itsmadeon@malo.fr",
       "adressClient": "Adomman Ollkm",
-      "villeClient": "Fes",
-      "abonnement": "Yearly",
-      "dateDebut": "12/12/2016",
-      "dateFin": "12/02/2015"
+      "villeClient": "Fes99",
+      "abonnement": "Entrprise",
+      "dateDebut": "2020-03-04T23:00:00.000Z",
+      "dateFin": "2020-03-10T23:00:00.000Z"
     },
     {
       "id": 3,
       "nomClient": "NomTAaa",
       "prenomClient": "PrenT",
       "statutClient": "Professionel",
-      "photoClient": "image.gt.png",
+      "photoClient": "https://thumbs.dreamstime.com/b/ic-ne-d-homme-conception-de-personne-dessin-de-vecteur-73698725.jpg",
       "telClient": "06258585",
       "emailClient": "nomt@gmai.com",
       "adressClient": "gt modan",
       "villeClient": "Gitoo",
-      "abonnement": "OpaaYno",
-      "dateDebut": "12/6/2012",
-      "dateFin": "12/6/2012"
+      "abonnement": "Entrprise",
+      "dateDebut": "2020-03-11T23:00:00.000Z",
+      "dateFin": "2020-03-09T23:00:00.000Z"
     },
     {
-      "id": 4,
-      "nomClient": "Oiyoo",
-      "prenomClient": "Poioi",
+      "id": 6,
+      "nomClient": "Opmapa",
+      "prenomClient": "Mploslo",
       "statutClient": "Professionel",
-      "photoClient": "opiyu.gmoo.png",
-      "telClient": "06258885",
-      "emailClient": "imap@gmail.fr",
-      "adressClient": "Goolamak",
-      "villeClient": "Tiznit",
-      "abonnement": "Monthly",
-      "dateDebut": "12/02/2018",
-      "dateFin": "12/02/2018"
+      "photoClient": "https://previews.123rf.com/images/djvstock/djvstock1608/djvstock160804563/60804940-costume-de-dessin-anim%C3%A9-homme-d-affaires-homme-avatar-m%C3%A2le-personne-ic%C3%B4ne-isol%C3%A9-et-plat-illustration-vecte.jpg",
+      "telClient": "0625252525",
+      "emailClient": "saimonaaa@gmail.com",
+      "adressClient": "Adress",
+      "villeClient": "Agadir",
+      "abonnement": "Pro",
+      "dateDebut": "2020-03-26T23:00:00.000Z",
+      "dateFin": "2020-03-09T23:00:00.000Z"
     },
     {
-      "id": 5,
-      "nomClient": "editNomze",
-      "prenomClient": "editPrenom",
-      "statutClient": "Civile",
-      "photoClient": "edit.png",
-      "telClient": "05252525",
-      "emailClient": "twiiter@twitter.com",
-      "adressClient": "Bangallow",
-      "villeClient": "Buenos aires",
-      "abonnement": "Abdoo",
-      "dateDebut": "12/20/2015",
-      "dateFin": "12/20/2015"
+      "id": 7,
+      "nomClient": "James",
+      "prenomClient": "Optional",
+      "statutClient": "Professionel",
+      "photoClient": "https://previews.123rf.com/images/jemastock/jemastock1704/jemastock170407100/76088540-dibujos-animados-hombre-con-icono-de-traje-hombre-avatar-persona-personas-y-tema-humano-dise%C3%B1o-aislado-.jpg",
+      "telClient": "0685888555",
+      "emailClient": "james@gmail.com",
+      "adressClient": "dimaon",
+      "villeClient": "addda",
+      "abonnement": "Entrprise",
+      "dateDebut": "2020-03-10T23:00:00.000Z",
+      "dateFin": "2020-03-18T23:00:00.000Z"
     }
   ],
   "Utilisateur": [
     {
       "id": 1,
-      "profils": "User",
+      "profils": "Admin",
       "dateCreation": "12/1/2022",
       "dateFin": "12/11/2022",
-      "photo": "dzdz.zd",
-      "email": null,
+      "photo": "No image provided!",
+      "email": "exampleFirst@gmail.com",
       "identifiant": "dzdzdaaaa"
     },
     {
       "id": 2,
-      "profils": "",
+      "profils": "User",
       "dateCreation": "",
       "dateFin": "",
-      "photo": "",
+      "photo": "No image provided!",
       "email": "itsmadeon@gmail.com",
       "identifiant": "123456789"
     },
     {
       "id": 3,
-      "profils": "",
+      "profils": "User",
       "dateCreation": "2020/02/29",
       "dateFin": "",
-      "photo": "",
+      "photo": "No image provided!",
       "email": "example@gmail.com",
-      "identifiant": "example134",
-      "confirmIdentifiant": "",
-      "oldidentifiant": ""
+      "identifiant": "example134"
+    },
+    {
+      "id": 4,
+      "profils": "Admin",
+      "dateCreation": "2020/03/03",
+      "dateFin": "",
+      "photo": "No image provided!",
+      "email": "unkown.admin@gmail.com",
+      "identifiant": "123456789"
+    },
+    {
+      "id": 5,
+      "profils": "Visitor",
+      "dateCreation": "2020/03/03",
+      "dateFin": "",
+      "photo": "No image provided!",
+      "email": "fakemail@email.com",
+      "identifiant": "aaaaaaaa"
+    },
+    {
+      "id": 6,
+      "profils": "User",
+      "dateCreation": "2020/03/05",
+      "dateFin": "",
+      "photo": "",
+      "email": "abdeslam.rehaimi@gmail.com",
+      "identifiant": "123456789"
+    },
+    {
+      "id": 7,
+      "profils": "User",
+      "dateCreation": "2020/03/07",
+      "dateFin": "",
+      "photo": "",
+      "email": "charlesdeluxe@gmail.com",
+      "identifiant": "123456789"
+    },
+    {
+      "id": 8,
+      "profils": "User",
+      "dateCreation": "2020/03/07",
+      "dateFin": "",
+      "photo": "",
+      "email": "charles.deluxe@gmail.com",
+      "identifiant": "123456789"
+    },
+    {
+      "id": 9,
+      "profils": "Admin",
+      "dateCreation": "2020/03/11",
+      "dateFin": "",
+      "photo": "",
+      "email": "cormak@gmail.com",
+      "identifiant": "123456789"
     }
   ]
 }

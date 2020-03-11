@@ -1,22 +1,52 @@
-<app-navbar></app-navbar>
-
+<!--<app-navbar></app-navbar>
 <mat-drawer-container class="example-container">
     <mat-drawer mode="side" opened>
         <app-sidebar> </app-sidebar>
-    </mat-drawer>
-    <mat-drawer-content>
-        <mat-toolbar color="accent">
-            <p class="card-text">Bienvenu a votre espace de Smart Vente.</p>
-            <span style="flex: 1 1 auto;"></span>
-            <div>
-                <button mat-icon-button matTooltip="My Account">
-          <i class="material-icons"> search </i>
-        </button>
-            </div>
-        </mat-toolbar>
 
-        <div class="container-fluid">
-            <router-outlet> </router-outlet>
-        </div>
+    </mat-drawer>
+    <mat-drawer-content style="background-color: #cbcbcb;">
+        <router-outlet> </router-outlet>
     </mat-drawer-content>
+
+</mat-drawer-container>
+-->
+
+
+
+<app-navbar></app-navbar>
+<mat-drawer-container class="example-container mat-typography" autosize>
+    <mat-drawer #drawer mode="side" disableClose="true" opened="true" style="background-color: #343232;">
+        <button mat-mini-fab (click)="isExpanded = !isExpanded" color="warn" style="margin: 10px;">
+          <mat-icon aria-label="Menu">menu</mat-icon>
+        </button>
+        <mat-nav-list>
+            <mat-list-item routerLink="clients" style="color: white; ">
+                <mat-icon mat-list-icon>person</mat-icon>
+                <h4 mat-line *ngIf="isExpanded">Clients</h4>
+            </mat-list-item>
+
+            <mat-list-item routerLink="products" style="color: white;">
+                <mat-icon mat-list-icon>assignment</mat-icon>
+                <h4 mat-line *ngIf="isExpanded">Produit</h4>
+            </mat-list-item>
+
+            <mat-list-item routerLink="fournisseurs" style="color: white;">
+                <mat-icon mat-list-icon>domain</mat-icon>
+                <h4 mat-line *ngIf="isExpanded">Fournisseurs</h4>
+            </mat-list-item>
+
+            <mat-list-item routerLink="users" style="color: white;">
+                <mat-icon mat-list-icon>folder_shared</mat-icon>
+                <h4 mat-line *ngIf="isExpanded">Utilisateurs</h4>
+            </mat-list-item>
+
+
+        </mat-nav-list>
+    </mat-drawer>
+
+
+
+    <div class="example-sidenav-content">
+        <router-outlet> </router-outlet>
+    </div>
 </mat-drawer-container>

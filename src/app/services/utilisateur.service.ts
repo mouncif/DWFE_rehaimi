@@ -17,9 +17,9 @@ export class UtilisateurService {
     dateFin: new FormControl(''),
     photo: new FormControl(''),
     email: new FormControl('', Validators.email),
-    identifiant: new FormControl('', [Validators.required, Validators.minLength(8)]),
-    confirmIdentifiant: new FormControl(''),
-    oldidentifiant: new FormControl('')
+    identifiant: new FormControl('', [Validators.required, Validators.minLength(8)])
+    //confirmIdentifiant: new FormControl(''),
+    //oldidentifiant: new FormControl('')
   });
 
   initializeFormGroup() {
@@ -31,8 +31,8 @@ export class UtilisateurService {
       photo: '',
       email: '',
       identifiant: '',
-      confirmIdentifiant: '',
-      oldidentifiant: '',
+      //confirmIdentifiant: '',
+      //oldidentifiant: '',
     });
   }
 

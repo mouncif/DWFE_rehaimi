@@ -1,10 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container" style="background-color: #343a40!important;">
+        <a class="navbar-brand" style="color: white;" href="#"><span>Smart Ventes</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            </ul>
+            <ul class=" navbar-nav my-2 my-lg-0">
+                <li class="nav-item active">
+                    <a style="color: white;" class="aColor nav-link aColor" [routerLink]="['/welcome']">Home <span
+            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 
 <div class="container-fluid">
-    <mat-toolbar>
+    <video autoplay muted loop id="myVideo">
+    <source src="../../assets/img/abstract_line2.mp4" type="video/mp4">
+  </video>
+    <mat-toolbar style="margin-top: 50px; margin-bottom: 50px;">
         <span class="fill-remaining-space"></span>
         <span>Veuillez S'authentifie</span>
         <span class="fill-remaining-space"></span>
     </mat-toolbar>
 
-<router-outlet> </router-outlet>
+    <router-outlet> </router-outlet>
 </div>
+
+<!-- This was actually a cool trick for modal ... edit not useful -->
+<!--
+
+<mat-tab-group>
+    <mat-tab label="Login">
+        <app-login></app-login>
+    </mat-tab>
+
+    <mat-tab label="Register">
+        <app-register></app-register>
+    </mat-tab>
+
+</mat-tab-group>
+-->
+
+
+
+<footer class=" fixed-bottom bg-dark">
+    <div class="container" style="background-color: #343a40!important;">
+        <p class="m-0 text-center text-white">Copyright &copy; Master ISI</p>
+    </div>
+    <!-- /.container -->
+</footer>

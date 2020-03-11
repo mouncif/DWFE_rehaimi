@@ -17,7 +17,7 @@ export class ListComponent implements OnInit {
   clients: client[] = [];
   user: client;
   listData = new MatTableDataSource<client>();
-  displayedColumns: string[] = ['nomClient', 'prenomClient', 'statutClient', 'telClient', 'emailClient', 'adressClient', 'abonnement', 'villeClient', 'actions'];
+  displayedColumns: string[] = ['nomClient', 'prenomClient', 'statutClient', 'telClient', 'emailClient', 'adressClient', 'abonnement', 'villeClient', 'photoClient', 'actions'];
 
   constructor(private clientService: ClientService, private router: Router, public notification: MatSnackBar, private dialog: MatDialog) { }
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -57,7 +57,6 @@ export class ListComponent implements OnInit {
       this.delete(id);
     }
   }
-
 
 
   delete(id) {

@@ -19,7 +19,7 @@ export class ListProduitComponent implements OnInit {
   listData = new MatTableDataSource<produit>();
 
   displayedColumns: string[] = ['nomProduit', 'nomCourtProduit', 'prixBase', 'prixVente',
-    'seuilMaxRemise', 'uniteProduit', 'quantiteInitialStock', 'quantiteActuelStock', 'actions'];
+    'seuilMaxRemise', 'uniteProduit', 'quantiteInitialStock', 'quantiteActuelStock','image', 'actions'];
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 

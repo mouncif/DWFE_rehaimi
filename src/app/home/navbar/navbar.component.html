@@ -1,12 +1,32 @@
-<mat-toolbar color="bg-color">
-    <mat-toolbar-row>
-        <span>Smarte Ventes</span>
-        <span class="example-spacer"></span>
-        <div>
-            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">help</mat-icon>
-            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">notifications_none</mat-icon>
-            <label class="example-icon" (click)="onClick()">{{ email }}</label>
-            <mat-icon class="example-icon" aria-hidden="false" (click)="onClick()" on aria-label="Example delete icon">settings</mat-icon>
-        </div>
-    </mat-toolbar-row>
-</mat-toolbar>
+<nav class="navbar navbar-expand-lg navbar-light bg-black">
+    <a class="navbar-brand" style="color: rgb(0, 0, 0);" href="#"><span><b>Smarte Ventes</b></span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        </ul>
+        <ul class=" navbar-nav my-2 my-lg-0">
+            <li class="nav-item active">
+                <mat-icon class=" nav-link fa-2x" style="color: #898886; margin-right: 10px;" aria-hidden="false" aria-label="Example heart icon">help</mat-icon>
+            </li>
+            <li class="nav-item">
+                <mat-icon class="nav-link fa-2x" style="color: #898886; margin-right: 15px;" aria-hidden="false" aria-label="Example delete icon">notifications_none</mat-icon>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class="btn btn-dark dropdown-toggle " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <img alt="AbdeslamRehaimi" class="avatar " src="../../../assets/img//profile.jpg" height="28" width="28">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-sw mt-2" style="width: 250px; background-color: #ffffffe8; left: -210px;" role="menu" aria-labelledby="dropdownMenuLink">
+                        <a role="menuitem" class="no-underline user-profile-link px-3 pt-2 pb-2 mb-n2 mt-n1 d-block" href="/AbdeslamRehaimi" data-ga-click="Header">
+                            <strong class="css-truncate-target">{{ email }}</strong></a>
+                        <a role="menuitem" class="dropdown-item" (click)="onClick()"><span class="adminpro-icon adminpro-settings someSpaces icon-drop-user"></span>Parametre </a>
+                        <a role="menuitem" class="dropdown-item" (click)="disconnect()"><span class="adminpro-icon adminpro-locked  someSpaces icon-drop-user"></span>Disconnect </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,9 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatDialogConfig } from '@angular/material';
 import { client } from '../../../models/client.model';
 import { ClientService } from "../../../services/client.service";
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AbonnementComponent } from 'src/app/abonnement/abonnement.component';
+
+interface Abonee {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-edits',
@@ -24,8 +30,14 @@ export class EditsComponent implements OnInit {
     dateDebut: '',
     dateFin: '',
   };
-  clients :client[] = [];
-  constructor(private service: ClientService, private router: Router, public notification: MatSnackBar) { }
+  clients: client[] = [];
+
+  abonnements: Abonee[] = [
+    { value: 'Free', viewValue: 'Free' },
+    { value: 'Pro', viewValue: 'Pro' },
+    { value: 'Entrprise', viewValue: 'Entrprise' }
+  ];
+  constructor(private service: ClientService, private router: Router, public notification: MatSnackBar, private dialog: MatDialog) { }
 
   ngOnInit() {
   }
@@ -48,9 +60,9 @@ export class EditsComponent implements OnInit {
 
 
 
-  onSubmit(){
+  onSubmit() {
     console.log('Optioooooo');
-    if(this.service.form.valid){
+    if (this.service.form.valid) {
       this.client = this.service.form.value;
       console.log(this.client);
       this.add();
@@ -59,26 +71,34 @@ export class EditsComponent implements OnInit {
     };
   }
 
-  add(){
-    if(this.client.id == undefined){
+  add() {
+    if (this.client.id == undefined) {
       console.log(this.client);
       this.service.add(this.client)
-      .subscribe((user)=>{
-        this.clients = [user, ...this.clients];
-        this.notification.open('Added sucessful ...')._dismissAfter(5000);
-      });
+        .subscribe((user) => {
+          this.clients = [user, ...this.clients];
+          this.notification.open('Added sucessful ...')._dismissAfter(5000);
+        });
     }
-    else{
+    else {
       this.service.update(this.client)
-      .subscribe((cli)=>{
-        console.log(cli);
-        this.notification.open('Update Succesful ...')._dismissAfter(5000);
-      });
+        .subscribe((cli) => {
+          console.log(cli);
+          this.notification.open('Update Succesful ...')._dismissAfter(5000);
+        });
     }
 
   }
 
 
+  abonnement() {
+    const dialConfig = new MatDialogConfig();
+    dialConfig.disableClose = false;
+    dialConfig.autoFocus = true;
+    dialConfig.width = '80%';
+    dialConfig.height = '80%';
+    this.dialog.open(AbonnementComponent, dialConfig).afterClosed().subscribe();
+  }
 
 
 }

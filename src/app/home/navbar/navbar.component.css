@@ -9,3 +9,33 @@
 .bg-color {
     background-color: antiquewhite;
 }
+
+.aColor {
+    color: #898886;
+}
+
+.space_Section {
+    margin-top: 20px;
+}
+
+.bg-black {
+    background-color: #ffff !important;
+}
+
+.bg-cool-blue {
+    background-color: #03579e !important;
+}
+
+.bg-white {
+    background-color: white !important;
+}
+
+.someSpaces {
+    margin-right: 15px;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #fefeff;
+    border-color: #b0b0b1;
+}

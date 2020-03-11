@@ -18,7 +18,7 @@ export class ListUsersComponent implements OnInit {
   utilisateurs: utilisateur[] = [];
   utilisateur: utilisateur;
   listData = new MatTableDataSource<utilisateur>();
-  displayedColumns: string[] = ['profils', 'dateCreation', 'dateFin', 'email', 'photo', 'actions'];
+  displayedColumns: string[] = ['profils', 'dateCreation', 'dateFin', 'email', 'actions'];
 
 
   constructor(private service: UtilisateurService, private router: Router, public notification: MatSnackBar, private dialog: MatDialog) { }
@@ -44,13 +44,13 @@ export class ListUsersComponent implements OnInit {
   }
 
   onEdit(row) {
-    //this.service.populateform(row);
+    this.service.populateform(row);
     //this.service.form['oldidentifiant']= 'nonenone';
     const dialConfig = new MatDialogConfig();
     dialConfig.disableClose = false;
     dialConfig.autoFocus = true;
     dialConfig.width = '50%';
-    dialConfig.height = '80%';
+    dialConfig.height = '60%';
     this.dialog.open(SecurpermissonComponent, dialConfig).afterClosed().subscribe((data) => this.fetchElements());
 
   }

@@ -4,6 +4,7 @@
 html,
 body {
     height: 100%;
+    /*padding-top: 56px;*/
 }
 
 div.container {
@@ -44,4 +45,8 @@ table {
 .container-fluid {
     background-color: #cbcbcb;
     height: 100%;
+}
+
+.mat-list-item-content:hover {
+    background-color: #07e2ff !important;
 }

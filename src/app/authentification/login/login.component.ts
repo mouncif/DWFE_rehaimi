@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { utilisateur } from '../../models/utilisateur.model';
 import { UtilisateurService } from "../../services/utilisateur.service";
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,7 @@ export class LoginComponent implements OnInit {
     email: '',
     identifiant: ''
   };
-  constructor(private service: UtilisateurService, private router: Router) { }
+  constructor(private service: UtilisateurService, private router: Router, public notification: MatSnackBar) { }
 
   ngOnInit() {
     this.onClear();
@@ -35,6 +36,7 @@ export class LoginComponent implements OnInit {
           if (val['email'] == this.user.email && val['identifiant'] == this.user.identifiant) {
             console.log('exist');
             this.router.navigateByUrl('home/clients');
+            this.notification.open('Bienvenu. vous etes: '+val['profils'])._dismissAfter(3000);
             localStorage.setItem("id", val["id"]);
             localStorage.setItem("loged", 'loged');
             if (val['profils'] == 'Admin') {
@@ -52,11 +54,13 @@ export class LoginComponent implements OnInit {
 
           } else {
             console.log('No user');
+            //this.notification.open('Invalid Identifiant!')._dismissAfter(3000);
           }
         }
       });
     } else {
       console.log('Identifiant incorrecte !!');
+      this.notification.open('Invalid Identifiant!')._dismissAfter(3000);
     }
   }
 

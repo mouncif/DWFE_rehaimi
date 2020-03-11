@@ -14,3 +14,12 @@ example-container {
 .example-sidenav {
     padding: 20px;
 }
+
+.mat-toolbar {
+    background: #964c4c;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.someSpaces {
+    margin-right: 15px;
+}

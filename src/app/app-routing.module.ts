@@ -17,16 +17,20 @@ import { ListFournisseurComponent } from './home/fournisseurs/list-fournisseur/l
 import { NewFournisseurComponent } from './home/fournisseurs/new-fournisseur/new-fournisseur.component';
 import { ListUsersComponent } from './home/users/list-users/list-users.component';
 import { EditUsersComponent } from './home/users/edit-users/edit-users.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 const routes: Routes = [
   {
-    path: '', component: AuthentificationComponent,
+    path: '', component: WelcomeComponent,
     //canActivate: [Authgard],
-    children: [
-      { path: '', component: LoginComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegisterComponent }
-    ]
+  },{
+    path: 'welcome', component: WelcomeComponent
   },
+  {path: 'auth', component: AuthentificationComponent, children:[
+    {path: '', component: LoginComponent},
+    {path: 'login', component: LoginComponent},
+    {path: 'register', component: RegisterComponent}
+  ]},
+  {path: 'register', component: RegisterComponent},
   {
     path: 'home', component: HomeComponent, children: [
       { path: '', component: ClientsComponent },

@@ -4,13 +4,16 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import {
   MatButtonModule, MatCardModule, MatInputModule,
   MatTableModule, MatMenuModule, MatIconModule, MatProgressSpinnerModule,
-  MatGridListModule, MatDatepickerModule, MatNativeDateModule,
+  MatGridListModule, MatDatepickerModule, MatNativeDateModule
 } from '@angular/material';
 import { MatDialogModule, MatRadioModule} from '@angular/material';
 import { MatSnackBarModule , MatFormFieldModule} from '@angular/material';
 import { MatPaginatorModule, MatCheckboxModule,MatSelectModule, MatTabsModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {MatListModule} from '@angular/material/list';
+
+
 
 @NgModule({
   declarations: [],
@@ -39,7 +42,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatSelectModule,
     MatFormFieldModule,
     MatTableModule,
-    MatTabsModule
+    MatTabsModule,
+    MatListModule
   ],
   exports: [
     CommonModule,
@@ -65,7 +69,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatCheckboxModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatTabsModule
+    MatTabsModule,
+    MatListModule
 
   ]
 })

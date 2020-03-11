@@ -8,24 +8,27 @@
         </div>
     </mat-tab>
     <mat-tab label="Give Permission">
-        <div style="text-align: center; margin-top: 10px;">
-            <label>{{ email }}</label><span style="margin-left: 15px;" class="badge badge-pill badge-success">Success</span>
-        </div>
-        <div style="text-align: center; margin-top: 50px;">
-            <label style="color: red;">Assigne a new permission for this utilisateur !</label>
-            <br>
-            <mat-form-field style="width: 150px;">
-                <mat-label>Edite permission</mat-label>
-                <mat-select>
-                    <mat-option *ngFor="let permission of permissions" [value]="permission.value">
-                        {{permission.viewValue}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-        </div>
-        <div style="text-align: center;">
-            <button class="btn btn-primary">Validate</button>
-        </div>
+        <form [formGroup]="service.form" class="normal-form" (submit)="updatePermission()">
+
+            <div style="text-align: center; margin-top: 10px;">
+                <label>{{ email }}</label><span style="margin-left: 15px;" class="badge badge-pill badge-success">Success</span>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <label style="color: red;">Assigne a new permission for this utilisateur !</label>
+                <br>
+                <mat-form-field style="width: 150px;">
+                    <mat-label>Edite permission</mat-label>
+                    <mat-select formControlName="profils">
+                        <mat-option *ngFor="let permission of permissions" [value]="permission.value">
+                            {{permission.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div style="text-align: center;">
+                <button class="btn btn-primary" type="submit">Validate</button>
+            </div>
+        </form>
 
     </mat-tab>
 </mat-tab-group>

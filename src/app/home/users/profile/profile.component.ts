@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵConsole } from '@angular/core';
 import { utilisateur } from 'src/app/models/utilisateur.model';
 import { UtilisateurService } from 'src/app/services/utilisateur.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -48,6 +48,33 @@ export class ProfileComponent implements OnInit {
               console.log(cli);
               this.notification.open('Update Succesful ...')._dismissAfter(3000);
               this.email = this.user.email;
+              this.getConnectedUser();
+              this.onClear();
+              this.router.navigateByUrl('home/users');
+            });
+        }
+      );
+    } else {
+      this.notification.open('Failed ...')._dismissAfter(2000);
+      this.getConnectedUser();
+      this.onClear();
+    }
+
+  }
+
+  updatePassword() {
+    this.user = this.service.form.value;
+    console.log('reached', this.user.identifiant);
+    if (this.user.identifiant != null) {
+      console.log(this.user.identifiant);
+      console.log(localStorage.getItem('id'));
+      this.service.findUser(localStorage.getItem('id')).subscribe(
+        (user: utilisateur) => {
+          user.identifiant = this.user.identifiant;
+          this.service.update(user)
+            .subscribe((cli) => {
+              console.log(cli);
+              this.notification.open('Update Succesful ...')._dismissAfter(3000);
               this.getConnectedUser();
               this.onClear();
               this.router.navigateByUrl('home/users');

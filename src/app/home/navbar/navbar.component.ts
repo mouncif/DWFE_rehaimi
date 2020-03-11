@@ -5,6 +5,7 @@ import { LoginComponent } from 'src/app/authentification/login/login.component';
 import { ProfileComponent } from '../users/profile/profile.component';
 import { UtilisateurService } from 'src/app/services/utilisateur.service';
 import { utilisateur } from 'src/app/models/utilisateur.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -13,7 +14,7 @@ import { utilisateur } from 'src/app/models/utilisateur.model';
 })
 export class NavbarComponent implements OnInit {
   private email: string;
-  constructor(private dialog: MatDialog,  private service: UtilisateurService) { }
+  constructor(private dialog: MatDialog,  private service: UtilisateurService, private router: Router) { }
 
   ngOnInit() {
     this.getConnectedUser();
@@ -24,7 +25,7 @@ export class NavbarComponent implements OnInit {
     dialConfig.disableClose = false;
     dialConfig.autoFocus = true;
     dialConfig.width = '80%';
-    dialConfig.height = '80%';
+    dialConfig.height = '55%';
     this.dialog.open(ProfileComponent, dialConfig).afterClosed().subscribe();
   }
 
@@ -34,6 +35,10 @@ export class NavbarComponent implements OnInit {
         this.email = user.email;
       }
     );
+  }
+
+  disconnect(){
+    this.router.navigateByUrl('/auth');
   }
 
 }

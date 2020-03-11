@@ -14,7 +14,7 @@
                             <legend class="scheduler-border"> Information Personnel </legend>
                             <div class="row">
                                 <div class="col-md-2 col-xl-2 col-sm-2">
-                                    <img src="../../../../assets/img/profileArt.png" style="height: 70%;width: 90%;" alt="picture">
+                                    <img src="../../../../assets/img/product.png" style="height: 80%;width: 90%;" alt="picture">
                                 </div>
 
                                 <div class="col-md-6 col-xl-6 col-sm-6">
@@ -95,10 +95,11 @@
                         </fieldset>
                     </fieldset>
                     <fieldset class="scheduler-border">
-                        <div class="offset-9 offset-lg-8 offset-md-8 offset-sm-8 button-row " style="margin-top: 10px;">
-
+                        <div class=" button-row " style="margin-top: 10px;">
                             <button mat-raised-button style="width: 100px;" color="warn" (click)="onClear()">Clear</button>
                             <button mat-raised-button style="width: 100px;" color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
+                            <button mat-raised-button style="width: 100px; float: right;" routerLink="../list" color="white" type="submit">Close</button>
+
                         </div>
                     </fieldset>
                 </form>

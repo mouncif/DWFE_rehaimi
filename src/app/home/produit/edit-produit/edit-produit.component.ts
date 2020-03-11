@@ -21,7 +21,7 @@ export class EditProduitComponent implements OnInit {
     image: '',
     quantiteInitialStock: null,
     quantiteActuelStock: null
-  }
+  };
   produits: produit[] = [];
   constructor(private service: ProduitService, private router: Router, public notification: MatSnackBar) { }
 

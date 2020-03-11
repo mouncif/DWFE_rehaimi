@@ -194,3 +194,16 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
 .space {
     margin-right: 30px;
 }
+
+li:hover,
+li:active {
+    background-color: black;
+}
+
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

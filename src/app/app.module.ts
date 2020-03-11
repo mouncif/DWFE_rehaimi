@@ -31,6 +31,9 @@ import { ListFournisseurComponent } from './home/fournisseurs/list-fournisseur/l
 import { ListUsersComponent } from './home/users/list-users/list-users.component';
 import { ProfileComponent } from './home/users/profile/profile.component';
 import { SecurpermissonComponent } from './home/users/securpermisson/securpermisson.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { AbonnementComponent } from './abonnement/abonnement.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +58,8 @@ import { SecurpermissonComponent } from './home/users/securpermisson/securpermis
     ListUsersComponent,
     ProfileComponent,
     SecurpermissonComponent,
+    WelcomeComponent,
+    AbonnementComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +71,9 @@ import { SecurpermissonComponent } from './home/users/securpermisson/securpermis
   ],
   entryComponents: [
     ProfileComponent,
-    SecurpermissonComponent
+    SecurpermissonComponent,
+    AuthentificationComponent,
+    AbonnementComponent,
   ],
   providers: [UtilisateurService, ProduitService, ClientService, FournisseurService],
   bootstrap: [AppComponent]
