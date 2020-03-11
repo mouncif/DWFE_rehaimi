@@ -109,33 +109,6 @@
   ],
   "Utilisateur": [
     {
-      "id": 1,
-      "profils": "Admin",
-      "dateCreation": "12/1/2022",
-      "dateFin": "12/11/2022",
-      "photo": "https://avatars0.githubusercontent.com/u/10137?s=460&v=4",
-      "email": "exampleFirst@gmail.com",
-      "identifiant": "dzdzdaaaa"
-    },
-    {
-      "id": 3,
-      "profils": "User",
-      "dateCreation": "2020/02/29",
-      "dateFin": "",
-      "photo": "No image provided!",
-      "email": "example@gmail.com",
-      "identifiant": "example134"
-    },
-    {
-      "id": 4,
-      "profils": "Admin",
-      "dateCreation": "2020/03/03",
-      "dateFin": "",
-      "photo": "https://avatars0.githubusercontent.com/u/10137?s=460&v=4",
-      "email": "unkown.admin@gmail.com",
-      "identifiant": "123456789"
-    },
-    {
       "id": 5,
       "profils": "Visitor",
       "dateCreation": "2020/03/03",
@@ -143,15 +116,6 @@
       "photo": "https://img.favpng.com/11/4/14/computer-icons-user-symbol-light-png-favpng-SpjCsM9Bzipc7zF1JQG3gKjt9.jpg",
       "email": "fakemail@email.com",
       "identifiant": "aaaaaaaa"
-    },
-    {
-      "id": 6,
-      "profils": "User",
-      "dateCreation": "2020/03/05",
-      "dateFin": "",
-      "photo": "https://www.xeus.com/wp-content/uploads/2014/09/One_User_Orange.png",
-      "email": "abdeslam.rehaimi@gmail.com",
-      "identifiant": "123456789"
     },
     {
       "id": 7,
@@ -197,6 +161,15 @@
       "photo": "https://cdn.futura-sciences.com/buildsv6/images/mediumoriginal/6/5/2/652a7adb1b_98148_01-intro-773.jpg",
       "email": "sssss@dddddd.dzz",
       "identifiant": "555555555555555"
+    },
+    {
+      "id": 13,
+      "profils": "User",
+      "dateCreation": "2020/03/11",
+      "dateFin": "",
+      "photo": "https://img-4.linternaute.com/FF6YlPeHw8H7O0gnWWYdNRbzINg=/1240x/smart/c429983d56454183a6906e90653d8bb4/ccmcms-linternaute/10654260.jpg",
+      "email": "abdeslam.rehaimi@gmail.com",
+      "identifiant": "123456789"
     }
   ]
 }
