@@ -2,7 +2,28 @@
 
 Hi! this is a fine take of creating an application named "Smart Ventes", it's an exam project
 
+## About this project
+
+
+
 ## Installation
+
+To get the project up and running on your local machine, do the following.
+
+1. clone with url given using commande => git clone https://github.com/mouncif/DWFE_rehaimi 
+2. Run npm install, to install all necessary dependencies
+2. Run the command json-server --watch db.json in your commande prompt to run the database json server
+4. Run the command ng serve in your commande prompt to start the server
+
+## Technologies used
+
+* Angular Frontend Framework.
+* webpack for compiling and optimizing assets (already integrated in angular).
+* Json-Server for manage data locally.
+* Material Design.
+* Bootstrap 4 for styling.
+* Visual Studio Code (IDE).
+* Git.
 
 ## Screen Shots
 ![01 - Welcom Page](https://github.com/mouncif/DWFE_rehaimi/blob/master/Screenshots/01%20-%20Welcome%20Page.png)
