@@ -2,6 +2,7 @@
 
 Hi! this is a fine take of creating an application named "Smart Ventes", it's an exam project
 
+
 ## About this project
 Our goal is to develop an angular SmartVentes application. The application will consist of the following modules: a Sales Management module and a user and rights module. The Sales Management module is composed of the following elements:
 
@@ -68,7 +69,15 @@ it hase no relation with the project it self, stackblitz failed with MatSnackBar
 Try it out locally, it should work fine!!!
 
 
+
 ## Complaines
 
 Send all complaines to "abdeslam.rehaimi@gmail.com"
 Have fun! =) ^^
+
+## Contributor
+
+| <a href="https://github.com/AbdeslamRehaimi" target="_blank">**Abdeslam Rehaimi**</a>  |
+| :---: |
+| <img width="150" height="150" src="https://github.com/abdeslamrehaimi.png?v=3&s=150">|
+| <strong>Be Fine</strong> |
