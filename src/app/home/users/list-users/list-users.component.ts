@@ -18,7 +18,7 @@ export class ListUsersComponent implements OnInit {
   utilisateurs: utilisateur[] = [];
   utilisateur: utilisateur;
   listData = new MatTableDataSource<utilisateur>();
-  displayedColumns: string[] = ['profils', 'dateCreation', 'dateFin', 'email', 'actions'];
+  displayedColumns: string[] = ['profils', 'dateCreation', 'dateFin', 'email', 'photo', 'actions'];
 
 
   constructor(private service: UtilisateurService, private router: Router, public notification: MatSnackBar, private dialog: MatDialog) { }
@@ -53,6 +53,23 @@ export class ListUsersComponent implements OnInit {
     dialConfig.height = '60%';
     this.dialog.open(SecurpermissonComponent, dialConfig).afterClosed().subscribe((data) => this.fetchElements());
 
+  }
+
+  onDelete(id) {
+    if (confirm('Are sure?')) {
+      this.delete(id);
+    }
+  }
+
+
+  delete(id) {
+    this.service.delete(id).subscribe(() => {
+      this.utilisateurs = this.utilisateurs.filter(data => data.id != id);
+      console.log(this.utilisateurs);
+      // this.notification.openSnackBar("Success Delete...!");
+      this.notification.open('Succes Delete ...')._dismissAfter(5000);
+      this.fetchElements();
+    });
   }
 
 

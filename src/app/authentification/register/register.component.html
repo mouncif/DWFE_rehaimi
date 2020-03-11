@@ -9,12 +9,17 @@
                         <div class="controles-container">
                             <input type="hidden" formControlName="id">
                             <mat-form-field>
+                                <input formControlName="photo" matInput placeholder="Votre Image URL*">
+                                <mat-error>Invalid photo url.</mat-error>
+                            </mat-form-field>
+                            <mat-form-field>
                                 <input formControlName="email" matInput placeholder="Nouveau Email">
                                 <mat-error>Invalid email.</mat-error>
                             </mat-form-field>
                             <mat-form-field>
                                 <input formControlName="identifiant" type="password" matInput placeholder="nouveau identifiant">
-                                <mat-error *ngIf="service.form.controls['identifiant'].errors?.required">Invalid mot de pass.</mat-error>
+                                <mat-error *ngIf="service.form.controls['identifiant'].errors?.required">Invalid mot de pass.
+                                </mat-error>
                                 <mat-error *ngIf="service.form.controls['identifiant'].errors?.minlength">Minimum 8 charactors neede d.
                                 </mat-error>
                             </mat-form-field>

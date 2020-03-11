@@ -37,6 +37,9 @@ export class RegisterComponent implements OnInit {
       this.user = this.service.form.value;
       this.user.dateCreation= this.myDate;
       this.user.profils = "User";
+      if(this.user.photo == null){
+        this.user.photo = "No image provided!";
+      }
       console.log(this.user);
       try {
         this.service.add(this.user).subscribe((user) => {
