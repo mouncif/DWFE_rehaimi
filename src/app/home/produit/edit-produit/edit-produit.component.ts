@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
-import { produit } from 'src/app/models/produit.model';
+import { produit } from '../../../models/produit.model';
 import { ProduitService } from "../../../services/produit.service";
 import { MatSnackBar } from '@angular/material/snack-bar';
 

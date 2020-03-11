@@ -4,7 +4,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material';
 import { client } from '../../../models/client.model';
 import { ClientService } from "../../../services/client.service";
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { AbonnementComponent } from 'src/app/abonnement/abonnement.component';
+import { AbonnementComponent } from '../../../abonnement/abonnement.component';
 
 interface Abonee {
   value: string;

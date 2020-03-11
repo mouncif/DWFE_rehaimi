@@ -1,6 +1,6 @@
 import { Component, OnInit, ɵConsole } from '@angular/core';
-import { utilisateur } from 'src/app/models/utilisateur.model';
-import { UtilisateurService } from 'src/app/services/utilisateur.service';
+import { utilisateur } from '../../../models/utilisateur.model';
+import { UtilisateurService } from '../../../services/utilisateur.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ListUsersComponent } from '../list-users/list-users.component';
 import { Router } from '@angular/router';

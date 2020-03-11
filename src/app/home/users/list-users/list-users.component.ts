@@ -4,9 +4,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatPaginator } from '@angular/material/paginator';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
-import { utilisateur } from 'src/app/models/utilisateur.model';
-import { UtilisateurService } from 'src/app/services/utilisateur.service';
-import { EditUsersComponent } from '../edit-users/edit-users.component';
+import { utilisateur } from '../../../models/utilisateur.model';
+import { UtilisateurService } from '../../../services/utilisateur.service';
 import { SecurpermissonComponent } from '../securpermisson/securpermisson.component';
 
 @Component({

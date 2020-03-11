@@ -1,12 +1,13 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
-import { fournisseur } from 'src/app/models/fournisseur.model';
-import { FournisseurService } from 'src/app/services/fournisseur.service';
+import { fournisseur } from '../../../models/fournisseur.model';
+import { FournisseurService } from '../../../services/fournisseur.service';
 import { MatTableDataSource, MatDialogConfig } from '@angular/material';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatPaginator } from '@angular/material/paginator';
 import { NewFournisseurComponent } from "../new-fournisseur/new-fournisseur.component";
+
 @Component({
   selector: 'app-list-fournisseur',
   templateUrl: './list-fournisseur.component.html',
