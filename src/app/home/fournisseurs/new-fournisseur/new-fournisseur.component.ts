@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
-import { fournisseur } from 'src/app/models/fournisseur.model';
-import { FournisseurService } from 'src/app/services/fournisseur.service';
+import { fournisseur } from '../../../models/fournisseur.model';
+import { FournisseurService } from '../../../services/fournisseur.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({

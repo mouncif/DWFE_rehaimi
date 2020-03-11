@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogConfig } from '@angular/material';
 import { MatDialog } from '@angular/material';
-import { LoginComponent } from 'src/app/authentification/login/login.component';
+import { LoginComponent } from '../../authentification/login/login.component';
 import { ProfileComponent } from '../users/profile/profile.component';
-import { UtilisateurService } from 'src/app/services/utilisateur.service';
-import { utilisateur } from 'src/app/models/utilisateur.model';
+import { UtilisateurService } from '../../services/utilisateur.service';
+import { utilisateur } from '../../models/utilisateur.model';
 import { Router } from '@angular/router';
 
 @Component({
