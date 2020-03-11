@@ -2,7 +2,6 @@
 
 Hi! this is a fine take of creating an application named "Smart Ventes", it's an exam project
 
-
 ## About this project
 Our goal is to develop an angular SmartVentes application. The application will consist of the following modules: a Sales Management module and a user and rights module. The Sales Management module is composed of the following elements:
 
@@ -34,6 +33,9 @@ To get the project up and running on your local machine, do the following.
 * Bootstrap 4 for styling.
 * Visual Studio Code (IDE).
 * Git.
+
+## Project Structure
+![Project Structure](https://github.com/AbdeslamRehaimi/E-learning-ReactJS/blob/master/client/project%20struuuuuuc.png)
 
 ## Screen Shots
 ![01 - Welcom Page](https://github.com/mouncif/DWFE_rehaimi/blob/master/Screenshots/01%20-%20Welcome%20Page.png)
